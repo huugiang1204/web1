@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="Logo.ico"/>
+		<title> Phoenix Shop</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<script type="text/javascript" src="scripts/main.js"></script>
+	</head>
+
+	<body>
+		<div class="top">
+						<form name="signinCheck" onsubmit="signinCheck()">
+							<div class="taikhoan">
+								Tài Khoản <input type="text" id="tendangnhap" size="20px" maxlength="25"/>
+								Mật khẩu <input type="password" id="mật khẩu" size="20px" maxlength="25"/>
+								<input type="submit" id="dangnhap" name="dangnhap" value="Đăng nhập"/>
+								<a href="dangkytk.html"><input type="submit" id="dangky" name="dangky" value="Đăng ký"/></a>
+							</div>
+						</form>
+					</div>
+		<header>
+	<div class="normal-wrapper">
+		  <div id="logo-container">
+			<i style="float:left"><a href="index.html"><img src="logo/logo1.png" width="150px" height="138px" /></i></a><h1>&nbsp PHOENIX SHOP</h1>
+			</div>
+    <div class=" icontop">
+          	<a href="https://www.youtube.com/?gl=VN" target="_blank"><span style="background:white; color: #5fd1e8" ><i class="fa fa-youtube-square" id="youtube" title="Theo dõi kênh chúng tôi trên Youtube"></i></a>
+            <a href="https://www.facebook.com/hieuchinhung1999" target="_blank"><span style="background:white; color: #5fd1e8"><i class="fa fa-facebook-f" id="facebook" title="Theo dõi chúng tôi trên Facebook"></i></a>
+            <a href="https://www.instagram.com/trinh.duc.hieu" target="_blank"><span style="background:white; color: #5fd1e8"><i class="fa fa-instagram" id="instagram" title="Theo dõi chúng tôi trên Instagram"></i></a>
+            </div>
+		  </div>
+	     
+		</header>
+		<br>
+		<div class="slideshow-container">
+
+				<div class="mySlides fade">
+				  <img src="sanpham/img/bg1.jpg" style="width:80%; height: 600px;margin: 0 10% 0 10% ">
+				  <div class="text"></div>
+				</div>
+
+				<div class="mySlides fade">
+				  <img  src="sanpham/img/anh23.jpg" style="width:80%; height: 600px;margin: 0 10% 0 10%">
+				  <div class="text"></div>
+				</div>
+
+				<div class="mySlides fade">
+				  <img src="sanpham/img/anh22.jpg" style="width:80%; height: 600px;margin: 0 10% 0 10%">
+				  <div class="text"></div>
+				</div>
+
+				</div>
+				<br>
+
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+				<script>
+				var slideIndex = 0;
+				showSlides();
+
+				function showSlides() {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					var dots = document.getElementsByClassName("dot");
+					for (i = 0; i < slides.length; i++) {
+					   slides[i].style.display = "none";  
+					}
+					slideIndex++;
+					if (slideIndex > slides.length) {slideIndex = 1}    
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					}
+					slides[slideIndex-1].style.display = "block";  
+					dots[slideIndex-1].className += " active";   
+				}
+					setInterval(showSlides, 2000); // 3s 1 hinh
+				</script>
+				
+		<div class = "container">
+			<nav>
+				
+				<a href="index.html?cart">
+				<div id="cartBtn">
+					<div id="cartBtnIcon">
+						<img src="images/cart.png" width="25px" height="25px">	
+					</div>
+					<!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
+				</div>
+				</a>
+				<table cellspacing="0">
+				
+					<tbody>
+						<tr  height="50px">
+							<td bgcolor="00FF00"><h2><a href="index.html" i class=" fa fa-home" title="Home">Home</h2></i></a></td>
+							<td bgcolor="00FF00"><h2><a href="#" i class="fa fa-question-circle" title="About">About</h2></i></a></td> 
+							<td bgcolor="00FF00"><h2><a href="#" i class=" fa fa-envelope" title="Contact">Contact</h2></i></a></td>
+					
+						</tr>
+					
+						
+					</tbody>
+					
+				</table>
+			</nav>
+			
+			<div class = "content">
+				
+				<aside id = "sidebar">
+					<!-- JAVASCRIPT INSERT MENU -->
+				</aside>
+				
+				<main id = "main">
+					<!--<h1>Hello world</h1><br>-->
+					<!-- JAVASCRIPT INSERT MAIN -->
+					
+				</main>
+				
+			</div>
+			</div>
+		
+		<footer id = "footer">	
+		<br>
+		<p><strong>©PHOENIX SHOP</strong></p>
+		<p>- Cửa hàng giày thể thao chính hãng - Authentic Sneaker Store.</p>
+		<p>- Address: <strong>XX Đường YY,  Phường ZZ, Quận KK, TP.HCM</strong></p>
+		<p>- Hotline:<strong>0123456789</strong> Email: <strong>phoenixshop@gmail.com</strong></p> 
+		</footer
+	</body>
+</html>
