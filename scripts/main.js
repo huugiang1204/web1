@@ -129,7 +129,7 @@ function getProductWindow () {
 	var url = window.location.href;
 	var splitter = url.split('?');			// [index.html]?[ao&1&0]
 	var splitted = "";
-	if (url != splitter)					// url == splitter => index.html
+	if (url = splitter)					// url == splitter => index.html
 		splitted = splitter[1];				// [ao&1&0]
 	var params = splitted.split('&');		// [ao]&[1]&[0] ; 0: Category; 1: Subcategory; 2: Page
 
@@ -137,14 +137,16 @@ function getProductWindow () {
 	
 	// EXPERIMENTAL
 	items = new Array ();			// filtered array
-	var itemOnPage = 20;
+	var itemOnPage = 50;
 	var itemStart = itemOnPage*(params[2]-1)+1;
 	var itemEnd = itemOnPage*(params[2]-1)+itemOnPage;
 	
 	
 	// Filter products
 	items.push (items[i]);	// empty item
-	if (splitter[0]==true) {		// Home page
+	if (splitter[1]==true)   // Home page
+	{
+						
 	}
 	else {
 		switch (params[0]) {
@@ -434,7 +436,7 @@ function getProductDetail (id) {
 	var s = "";
 
 	s += `<div style="float: left">
-			<img src="`+ item[id].image + `" width="200" height="200">
+			<img src="`+ item[id].image + `" width="300px" height="300px" margin-top="10px">
 		</div>
 		<div id="productDetail">
 			<h1>` + item[id].name + `</h1>
@@ -538,7 +540,6 @@ function addToCart (id) {
 	addItemToCart (itemIden, 1);
 
 }
-
 function addItemToCart (iden, amount) {
 	var currentAmount = window.localStorage.getItem (iden);
 	if (currentAmount == null) {

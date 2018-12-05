@@ -14,7 +14,7 @@ body {
 	width: 100%;
 	min-width: 500px;
 	max-width:1500px;
-	background: url(logo/bg.jpg);
+	/*background: url(./logo/bg.jpg);*/
 }
 #tendangnhap
 {
@@ -114,7 +114,7 @@ body {
 }
 .top {
 	width: 1200px;
-	background: url(logo/bg.jpg);
+	/*background: url(logo/bg.jpg);*/
 	padding: 0;
 	float:right;
 	
@@ -143,7 +143,7 @@ header {
 	background-position: center;
 	background-repeat: repeat;
 	background-size: cover;
-	background-image:url('..sanpham/img/bg.jpg');
+	background-image:url(../sanpham/img/bg1.jpg);
 }
 
 header div {
@@ -203,13 +203,18 @@ nav {
 nav table {
 	/*width: 994px;*/
 	width: 1000px;
+	font-size: 30px;
 }
 
 nav table a {
 	display: block;
-	line-height: 30px;
-	color: #FF6347;
+	
+	font-weight: bold;
+	padding: 15px;
+	width: 100%;
+	color: #222;
 }
+
 
 nav table a:hover {
 	color: #00FF7F;
@@ -220,11 +225,12 @@ nav table td {
 	width: 25%;
 	text-align: center;
 	color: #FFFFFF;
+	transition-duration: .1s;
 }
 
 nav table td:hover {
 	/*background: #FFC46E;*/
-	background: #FF00FF;
+	background: #156463;
 	color: #FFFFFF;
 }
 
@@ -242,6 +248,7 @@ nav table td:hover {
 	padding: 0 10px;
 	height: 30px;
 	border: thin solid #D6D6D6;
+	border-radius: 5px;
 }
 
 #searchBtn {
@@ -262,22 +269,27 @@ nav table td:hover {
 	float: left;
 	/*background: #368BB9;*/
 	padding: 1em 0em;
+	position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+
 }
 
 #sidebar table {
 	width: 100%;
-	/*background: #FFEA00;*/
 
 }
 
+/* ten hang */
 #sidebar table tr td > a {
     display:block;
 	line-height: 30px;
 	padding: 0em 1em;
     text-decoration:none;
 	color: white;
-	background: url(logo/fullbg.jpg);
+	background-color: #30aad3;
 	border: thin solid #D6D6D6;
+	transition-duration: .3s;
 }
 
 #sidebar table tr td > a:hover {
@@ -300,18 +312,20 @@ nav table td:hover {
 #sidebar table tr td div {		
 	/*display: none;*/
 	/*position: absolute;*/
-	left: 100%;
-	top: 0%;
+	/*left: 100%;
+	top: 0%;*/
+	margin-left: 15px;
 	min-width: 150px;
 }
 
+/* ten san pham nam nu */
 #sidebar table tr td div ul li > a {
 	display:block;
 	line-height: 30px;
-	padding: 0em 2em;
+	/*padding: 0em 2em;*/
     text-decoration:none;
 	color: #2F2F2F;
-	background: url;
+	transition-duration: .3s;
 }
 
 #sidebar ul {
@@ -325,16 +339,12 @@ nav table td:hover {
 
 #sidebar table tr td div li {
 	display: list-item;
-	/*border: thin solid #FFCC01;*/
-	border: thin solid #D6D6D6;
-	border-top: none;
+	border: none;
 	margin: 0;
-	background: url(logo/bg.jpg);
-	/*padding: 1px 0;				/* Vừa xát với table */	
 }
 
 #sidebar table tr td div li a:hover {
-	background: #FF00FF;
+	background: #ddb344;
 }
 
 #sidebar p {
@@ -390,7 +400,7 @@ nav table td:hover {
 	width: 78%;
 	float: right;
 	/*padding: 1em;*/
-	background: url(logo/bg.jpg);
+	/*background: url(logo/bg.jpg);*/
 	
 	min-height: 500px;	
 }
@@ -404,10 +414,12 @@ nav table td:hover {
 	width: 180px;
 	height: 325px;
 	border: thin solid #368bb9;
+	transition-duration: .2s
 }
 
 #main > #productDiv:hover {
-	background: #00FF7F;
+	/*background: #00FF7F;*/
+	transform: scale(1.05)
 }
 
 #main p {
@@ -444,11 +456,13 @@ nav table td:hover {
 	cursor: pointer;
 	border-radius: 20px;
 	text-align:center;
+	color: #ddd;
 	background-color:#006699;
 }
 .gio:hover
 {
-	background-color:#3E8E41;
+	color: #fff;
+	background-color:#41c646;
 }
 #xoa
 {
