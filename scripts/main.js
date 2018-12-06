@@ -383,6 +383,7 @@ function getProductWindow () {
 			return;
 		}
 
+
 	}
 
 	console.debug ("before: " + itemStart + " " + itemEnd);
@@ -423,8 +424,7 @@ function getProduct (i, item) {
 				<p>` + item[i].name + `</p>
 				<p>` + item[i].color + `</p>
 				<p><span class="price">` + item[i].price + `₫</span>`;
-	
-	s += 		`</p>
+				s += `</p>
 				<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ" onclick="addToCart(` + prodID + `)"/>	
 			</div>
 		</div>`;
@@ -446,8 +446,8 @@ function getProductDetail (id) {
 			<p>Mã SP: ` + item[id].id + `</p>
 			<p style="margin: 1em 0"><span id="detailPrice">` + item[id].price + `₫</span>`;
 			s +=`</p>
+			<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ"/>	
 		</div>`;
-
 	document.getElementById("main").innerHTML += s;
 }
 
@@ -645,6 +645,30 @@ function getComparator (item) {
 	}
 	return comparator;
 }
+function showThanhDangNhap(){
+	document.getElementById("tdn").style.transform = "scale(1)";
+}
+
+function showThanhDangKi(){
+	document.getElementById("dk").style.transform = "scale(1)";
+}
+
+function showSlides() {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {slideIndex = 1}    
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+					slides[slideIndex-1].style.display = "block";  
+					dots[slideIndex-1].className += " active";   
+				}
+					setInterval(showSlides, 2000); // 3s 1 hinh
 
 
 

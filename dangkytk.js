@@ -6,6 +6,7 @@ function formcheck(){
 	if(username==""){
 		document.getElementById("z-username").innerHTML='<span style="color:red;">Bạn chưa nhập tài khoản</span>';
 		document.register.username.style.backgroundColor="red";
+		document.getElementById("username").focus();
 		check=0;
 	}
 	else{
@@ -18,6 +19,7 @@ function formcheck(){
 	if(password==""){
 		document.getElementById("z-password").innerHTML='<span style="color:red;">Bạn chưa nhập mật khẩu</span>';
 		document.register.password.style.backgroundColor="red";
+		document.getElementById("password").focus();
 		check=0;
 	}
 	else if(password.length>=6 && password.length<=20)
@@ -28,6 +30,7 @@ function formcheck(){
 	else{
 		document.getElementById("z-password").innerHTML='<span style="color:red;">Kích thước mật khẩu bạn nhập không hợp lệ</span>';
 		document.register.password.style.backgroundColor="red";
+		document.getElementById("password").focus();
 		check=0;
 	}
 	//repassword
@@ -35,16 +38,18 @@ function formcheck(){
 	if(repassword==""){
 		document.getElementById("z-repassword").innerHTML='<span style="color:red;">Bạn chưa nhập mật khẩu lại</span>';
 		document.register.repassword.style.backgroundColor="red";
+		document.getElementById("repassword").focus();
 		check=0;
-	}
-	else if(repassword.length<6 || repassword.length>20){
-		document.getElementById("z-repassword").innerHTML='<span style="color:red;">Kích thước mật khẩu bạn nhập không hợp lệ</span>';
-		document.register.repassword.style.backgroundColor="red";
-		check=0;
-	}
+	}	
 	else if(password!=repassword){
 		document.getElementById("z-repassword").innerHTML='<span style="color:red;">Mật khẩu nhập lại khác với mật khẩu trên</span>';
 		document.register.repassword.style.backgroundColor="red";
+		document.getElementById("repassword").focus();
+		check=0;
+	}else if(repassword.length<6 || repassword.length>20){
+		document.getElementById("z-repassword").innerHTML='<span style="color:red;">Kích thước mật khẩu bạn nhập không hợp lệ</span>';
+		document.register.repassword.style.backgroundColor="red";
+		document.getElementById("repassword").focus();
 		check=0;
 	}
 	else{
@@ -57,6 +62,7 @@ function formcheck(){
 	if(fname==""){
 		document.getElementById("z-fname").innerHTML='<span style="color:red;">Bạn chưa nhập họ và tên lót/đệm</span>';
 		document.register.fname.style.backgroundColor="red";
+		document.getElementById("fname").focus();
 		check=0;
 	}
 	else{
@@ -68,6 +74,7 @@ function formcheck(){
 	if(lname==""){
 		document.getElementById("z-lname").innerHTML='<span style="color:red;">Bạn chưa nhập tên</span>';
 		document.register.lname.style.backgroundColor="red";
+		document.getElementById("lname").focus();
 		check=0;
 	}
 	else{
@@ -81,11 +88,13 @@ function formcheck(){
 	if(email==""){
 		document.getElementById("z-email").innerHTML='<span style="color:red;">Bạn chưa nhập email</span>';
 		document.register.email.style.backgroundColor="red";
+		document.getElementById("email").focus();
 		check=0;
 	}
 	else if( (aCong<1) || (dauCham<aCong+2) || (dauCham+2>email.length) ){
 		document.getElementById("z-email").innerHTML='<span style="color:red;">Bạn nhập email chưa hợp lý</span>';
 		document.register.email.style.backgroundColor="red";
+		document.getElementById("email").focus();
 		check=0;
 	}
 	else{
@@ -98,7 +107,7 @@ function formcheck(){
 		return true;
 	}
 	else{
-		alert("Bạn đăng ký chưa thành công! Bạn cần phải sửa lại thông tin chưa chính xác.");
+		alert("Thông tin chưa chính xác !!!");
 		return false;
 	}
 }

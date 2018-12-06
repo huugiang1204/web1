@@ -4,7 +4,7 @@
 	list-style: none;
 	text-decoration: none;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+    box-sizing: border-box;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
@@ -13,7 +13,7 @@ body {
 	margin: 0;
 	width: 100%;
 	min-width: 500px;
-	max-width:1500px;
+	/*max-width:1500px;*/
 	/*background: url(./logo/bg.jpg);*/
 }
 #tendangnhap
@@ -86,18 +86,7 @@ body {
 	float:right;
 	font-size:30px;
 }
-#youtube:hover
-{
-	background:red;
-}
-#facebook:hover
-{
-	background:blue;
-}
-#instagram:hover
-{
-	background:#FF00FF;
-}
+
 #logo-container
 {
 	margin-top:55px;
@@ -110,21 +99,25 @@ body {
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	    -ms-flex-flow: row wrap;
-	        flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
 .top {
-	width: 1200px;
-	/*background: url(logo/bg.jpg);*/
+	width: 100%;
+	background-color: #9eb3d3;
 	padding: 0;
 	float:right;
+	position: sticky;
+  	top: 0;
+  	z-index: 100;
 	
 }
 .taikhoan
 {
-	text-align:right;
+	float:right;
 	color:red;
-	margin-right:32px;
+	padding-right:32px;
+	z-index: 100;
 }
 header {
 	width: inherit;
@@ -135,10 +128,10 @@ header {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
+    -ms-flex-pack: center;
 	padding: 0em 2em;
 	clear: both;
 	background-position: center;
@@ -579,4 +572,16 @@ main > div > #pageBtnActive > p {
 
 #footer p {
 	color: #FFFFFF;
+}
+#tdn{
+	position: initial ;
+	transition: 2s;
+}
+#dk{
+	position:fixed;
+	left: 20%;
+	right: 20%;
+	z-index: 99;
+	top: 10%;
+	transition: 1s;
 }
