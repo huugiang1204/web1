@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="Logo.ico" />
+    <title>About Phoenix Shop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styleab.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="taikhoan">
+            Tài Khoản <input type="text" id="tendangnhap" size="20px" maxlength="25" />
+            Mật khẩu <input type="password" id="mật khẩu" size="20px" maxlength="25" />
+            <input type="submit" id="dangnhap" name="dangnhap" value="Đăng nhập" />
+            <a href="dangkytk.html"><input type="submit" id="dangky" name="dangky" value="Đăng ký"/></a>
+        </div>
+    </div>
+    <header>
+        <div class="normal-wrapper">
+            <div id="logo-container">
+                <i style="float:left"><a href="index.html"><img src="logo/logo1.png" width="150px" height="138px" /></i></a><h1>&nbsp PHOENIX SHOP</h1>
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <nav>
+            <table cellspacing="0">
+                <tr id="tr">
+                    <td><a href="index.html" i class="fa fa-home" title="Home"> Home</i></a></td>
+                    <td><a href="About.html" i class="fa fa-question-circle" title="About"> About</i></a></td>
+                    <td><a href="Contact.html" i class=" fa fa-envelope" title="Contact"> Contact</i></a></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+    <br>
+    <div class="lienhe">
+        <h1 class="tieude1">MỌI THẮC MẮC HÃY LIÊN HỆ CHÚNG TÔI</h1>
+        <h3>Nhập thông tin khách hàng</h3>
+        <table id="thongtin">
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" name="hoten" size="25" placeholder="Nhập họ và tên"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="text" name="email" size="25" placeholder="Nhập Email"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="number" name="sdt" size="25" placeholder="Số điện thoại"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" name="diachi" size="25" placeholder="Nhập địa chỉ"></td>
+            </tr>
+        </table>
+        <h2>Loại liên hệ</h2>
+        <p><input type="radio" name="radio">Thông tin chung</p>
+        <p><input type="radio" name="radio"> Tư vấn / Giải pháp</p>
+        <p><input type="radio" name="radio">Nhân sự</p>
+        <p><input type="radio" name="radio"> Đào tạo</p>
+        <p><input type="radio" name="radio"> Bảo vệ</p>
+        <h2>Nội dung</h2>
+        <textarea rows="10" cols="50">
+			</textarea>
+        <br>
+        <input type="submit" name="submit" value="Send" onclick="send();">
+        <script type="text/javascript">
+        function send() {
+            alert("Bạn đã gửi thành công!");
+        }
+        </script>
+    </div>
+    <div class="tuyendung">
+        <h1 class="tieude2">TUYỂN NHÂN VIÊN BÁN HÀNG</h1><br />
+        <b>1.MÔ TẢ</b>
+        <ul>
+            <li>Vui vẻ, lịch sự chào đón khi khách vào cửa hàng.</li>
+            <li>
+                Tìm hiểu nhu cầu, tư vấn các thông tin về: Sản phẩm, dịch vụ, chương trình khuyến mãi, hậu mãi cho khách hàng.
+            </li>
+            <li>Sắp xếp sản phẩm gọn gàng, hợp lý, vệ sinh cửa hàng khi hết ca làm việc.</li>
+            <li>Nắm bắt, cập nhật thông tin, tính năng của sản phẩm mới: form sản phẩm, chất liệu, màu sắc, kiểu dáng...</li>
+        </ul>
+        <b>2.THỜI GIAN LÀM VIỆC</b>
+        <ul>
+            <li><span>Từ 18h – 21h30 các ngày trong tuần</span></li>
+            <li>Nghỉ 3 ngày/ tháng</li>
+        </ul>
+        <b>3.ĐỊA ĐIỂM LÀM VIỆC</b>
+        <ul>
+            <li>194 Lê Văn Việt Quận 9, HCM</li>
+            <li>29 Hiệp ư Bình Quận Thủ Đức, HCM</li>
+            <li>2 Nguyễn Thị Minh Khai Quận 1, HCM</li>
+            <li>730 Tỉnh lộ 10 Quận Bình Tân, HCM</li>
+        </ul>
+        <b>4.YÊU CẦU</b>
+        <ul>
+            <li>Nam/Nữ, tuổi từ 18 - 25.</li>
+            <li>Ngoại hình khá, thân thiện, niềm nở.</li>
+            <li>Có kỹ năng giao tiếp, thuyết phục, đàm phán tốt với khách hàng.</li>
+            <li>Kiên trì, năng động, trung thực, nhiệt tình.</li>
+            <li><span>Số lượng cần tuyển: 02</span></li>
+        </ul>
+        <b>5.QUYỀN LỢI</b>
+        <ul>
+            <li>Thu nhập: <span>3.000.000 - 4.000.000 VNĐ/tháng.</span></li>
+            <li>Hoa hồng hưởng theo doanh thu bán hàng của cửa hàng.</li>
+            <li>Thưởng thêm theo tăng trưởng cửa hàng.</li>
+        </ul>
+    </div>
+    <br>
+    <footer>
+        <table id="footer">
+            <tr>
+                <td width="33%">
+                    <p><strong style="font-size:18px">Liên hệ cá nhân <br>
+				Nguyễn Thiên Hữu<br>
+				Trịnh Đức Hiếu <br>
+				Lương Hữu Giang <br>
+				Đỗ Phát Sơn Huy <br>
+				</strong></p>
+                </td>
+                <td width="34%">
+                    <p><strong>©PHOENIX SHOP</strong></p>
+                    <p>- Cửa hàng giày thể thao chính hãng - Authentic Sneaker Store.</p>
+                    <p>- Address: <strong>XX Đường YY,  Phường ZZ, Quận KK, TP.HCM</strong></p>
+                    <p>- Hotline:<strong>0123456789</strong> Email: <strong>phoenixshop@gmail.com</strong></p>
+                </td>
+                <td width="33%" height="50px">
+                    <p>Ủng hộ chúng tôi</p>
+                    <a href="https://www.youtube.com/?gl=VN" target="_blank"><i class="fa fa-youtube-square" style= "color:red;font-size:48px" id="youtube" title="Theo dõi kênh chúng tôi trên Youtube"></i></a>
+                    <a href="https://www.facebook.com/hieuchinhung1999" target="_blank">
+            <i class="fa fa-facebook-square" style= "color:blue;font-size:48px" id="facebook" title="Theo dõi chúng tôi trên Facebook"></i></a>
+                    <a href="https://www.instagram.com/trinh.duc.hieu" target="_blank"><i class="fa fa-instagram" style= "color:#EE28EE;font-size:48px" id="instagram" title="Theo dõi chúng tôi trên Instagram"></i></a>
+                </td>
+            </tr>
+    </footer>
+</body>
+
+</html>

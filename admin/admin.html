@@ -1,0 +1,84 @@
+<!DOCTYPE html >
+<html lang="ad">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ADMIN</title>
+<link rel="stylesheet" href="css admin/adminstyle.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+</head>
+
+<body>
+
+        <div class="wrapper">
+            <div class="header">
+                <span class="title-header">ADMIN AREA</span>
+                <div class="nav-right">
+                   <img src="icon/user-icon.svg">
+                    <div class="ten-admin">Giang  </div>
+                    <a href="index.html">
+                        <div style="font-size: 15px;margin:17px 8px 0 8px">Đăng Xuất</div>
+                    </a>
+                </div>
+            </div>
+            <div class="left-menu">
+                <a class="left-menu__item active" href="#">Thống kê</a>
+                <a class="left-menu__item" href="qlsp.html">Quản lý sản phẩm</a>
+                <a class="left-menu__item" href="qluser.html">Quản lý User</a>
+                <a class="left-menu__item" href="qldh.html">Quản lý đơn hàng</a>
+                <a class="left-menu__item" href="qldm.html">Quản lý danh mục</a>
+                <div class="copyright">&copy PHOENIX SHOP</div>
+            </div>
+            <div class="main">
+                <div class="breadcrumb">
+                    <span><a href="../index.html">Home</a></span>
+                    <span> / </span><span>Admin</span><span> / </span><span>Thống kê</span>
+                </div>
+                <div class="chart chart-bgred">
+                    <div class="chart__num">10,000</div>
+                    <div class="chart__label">Người Truy Cập</div>
+                    <div class="chart__img chart__img-imgTC"></div>
+                </div>
+                <div class="chart chart-bgblue">
+                    <div class="chart__num" id="Sold"></div>
+                    <div class="chart__label">Sản Phẩm Đã Bán</div>
+                    <div class="chart__img chart__img-imgSP"></div>
+                </div>
+                <div class="chart chart-bgbluewhite">
+                    <div class="chart__num" id="Client"></div>
+                    <div class="chart__label">Khách Hàng</div>
+                    <div class="chart__img chart__img-imgKH"></div>
+                </div>
+                <div class="chart chart-bgyellow">
+                    <div class="chart__num" id="Money"></div>
+                    <div class="chart__label">Doanh Thu</div>
+                    <div class="chart__img chart__img-imgDT"></div>
+                </div>
+                <a href="qlsp.html"><div class="thong-ke">
+                    <div class="thong-ke__num" id="tong_sp"></div>
+                    <div class="thong-ke__title">Tổng Sản Phẩm</div>
+                    <div class="thong-ke__img img_product"></div>
+                </div></a>
+                <a href="qluser.html"><div class="thong-ke">
+                    <div class="thong-ke__num" id="Client1"></div>
+                    <div class="thong-ke__title">Khách Hàng</div>
+                    <div class="thong-ke__img img_user"></div>
+                </div></a>
+                <a href="qldh.html"><div class="thong-ke">
+                    <div class="thong-ke__num" id="don_hang"></div>
+                    <div class="thong-ke__title">Đơn Hàng</div>
+                    <div class="thong-ke__img img_donhang"></div>
+                </div></a>
+                <a href="qldm.html"><div class="thong-ke">
+                    <div class="thong-ke__num" id="danh_muc"></div>
+                    <div class="thong-ke__title">Danh Mục SP</div>
+                    <div class="thong-ke__img img_danhmuc"></div>
+                </div></a>
+            </div>
+            <div class="footer">
+                <div>Powered by <a href="../index.html" >PHOENIX SHOP</a></div>
+            </div>
+        </div>
+</body>
+</html>

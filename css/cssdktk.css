@@ -1,0 +1,38 @@
+*{
+    margin: 0 auto;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+body
+{
+    background:#1f511e;
+}
+.table tr , td
+{
+    border: 0;
+    border-color: chocolate;
+}
+.table
+{
+    color:#fff;
+}
+#username , #password , #repassword , #fname , #lname , #email , #address , #telphone
+{
+    border-radius: 15px;
+}
+#dangkytk , #huy
+{
+    border-radius:15px;
+    background:#8c4210;
+}
+#dangkytk:hover
+{
+    background:green;
+}
+#huy:hover
+{
+    background:red;
+}
+
+#
+
+

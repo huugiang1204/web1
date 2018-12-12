@@ -1,219 +1,117 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="shortcut icon" href="Logo.ico"/>
-		<title> Phoenix Shop</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-		<script type="text/javascript" src="scripts/main.js"></script>
-		<script type="text/javascript" src="dangkytk.js"></script>
-	</head>
 
-	<body>
-		<div class="top">
-							<div class="taikhoan">
-								<b id ="tdn" style="transform:scale(0)" >	Tài Khoản <input type="text" id="tendangnhap" size="20px" maxlength="25"/>
-																				Mật khẩu <input type="password" id="mật khẩu" size="20px" maxlength="25"/></b>
-								<input type="submit" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="showThanhDangNhap()"/>
-								<input type="button" id="dangky" name="dangky" value="Đăng ký" onclick="showThanhDangKi()" /></a>
-							</div>					
-		</div>
-		<header>
-	<div class="normal-wrapper">
-		  <div id="logo-container">
-			<i style="float:left"><a href="index.html"><img src="logo/logo1.png" width="150px" height="138px" /></i></a><h1>&nbsp PHOENIX SHOP</h1>
-			</div>
+<head>
+    <link rel="shortcut icon" href="Logo.ico" />
+    <title> Phoenix Shop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="scripts/main.js"></script>
+</head>
 
-		  </div>
-	     
-		</header>
-		<br>
-
-		<div class="slideshow-container">
-
-				<div class="mySlides fade">
-				  <img src="sanpham/img/banner1.jpg" style="width:80%; height: 600px;margin: 0 10% 0 10% ">
-				  <div class="text"></div>
-				</div>
-
-				<div class="mySlides fade">
-				  <img  src="sanpham/img/banner2.png" style="width:80%; height: 600px;margin: 0 10% 0 10%">
-				  <div class="text"></div>
-				</div>
-
-				<div class="mySlides fade">
-				  <img src="sanpham/img/banner3.png" style="width:80%; height: 600px;margin: 0 10% 0 10%">
-				  <div class="text"></div>
-				</div>
-
-				</div>
-				<br>
-
-				<div style="text-align:center">
-				  <span class="dot"></span> 
-				  <span class="dot"></span> 
-				  <span class="dot"></span> 
-				</div>
-		<script>
-			var slideIndex = 0;
-			showSlides();
-		</script>
-	<form id="dk" style="transform: scale(0)" name="register" method="post" action="action_page.php" onSubmit="return formcheck()" >
-		<table border="1" width="700px" style="margin: auto;background-color:#70ef96;font-size: 10px">
-			<tr   align="center"  bgcolor="aqua"> <td colspan="2">ĐĂNG KÝ THÀNH VIÊN</td> </tr>
-			<tr cosplan="2">
-			<td><span style="color: red;">(*) </span>: bắt buộc phải nhập</td>
-			</tr>
-			<tr>
-				<td align="right"> Tên đăng nhập:</td>
-				<td style="color: red"><input type="text" id="username"  placeholder="Tài khoản"   tabindex="1" onFocus="fixusername()">(*)</td>
-				<div align="left" id="z-username"> </div>
-			</tr>
-			<tr>
-				<td align="right"> Mật khẩu:</td>
-				<td style="color: red">
-					<input type="password" id="password" name="password" placeholder="Mật khẩu" tabindex="2" onFocus="fixpassword()" >(*)
-					<div id="z-password"> </div>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">Nhập lại mật khẩu:</td>
-				<td style="color: red">
-					<input type="password" id="repassword" name="repassword" placeholder="Mật khẩu" tabindex="3" onFocus="fixrepassword()" >(*)
-					<div id="z-repassword"> </div>
-				</td>
-			</tr>
-			<tr>
-				<td ></td>
-				<td >(Có từ 6-20 ký tự)</td>
-			</tr>
-			<tr> <td colspan="2"><hr></td></tr>
-			<tr > <td colspan="2" >Thông tin cá nhân:</td> </tr>
-			<tr>
-				<td align="right">Họ và tên lót:</td>
-				<td style="color: red">
-					<input type="text" id="fname" name="fname" placeholder="Họ và tên lót" tabindex="4" onFocus="fixfname()" >(*)
-					<div id="z-fname"> </div>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">Tên:</td>
-				<td style="color: red">
-					<input type="text" id="lname" name="lname" placeholder="Tên" tabindex="5" onFocus="fixlname()" >(*)
-					<div id="z-lname"> </div>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">Giới tính:</td>
-				<td >
-					<input type="radio"  name="gender" value="male" tabindex="9" > Nam
-					<input type="radio"  name="gender" value="female" tabindex="9" > Nữ
-					<div style="color:red" id="z-gender"> </div>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">Ngày sinh:</td>
-				<td >
-					<input type="date" id="dateofbirth" name="dateofbirth" tabindex="8" >(ngày/tháng/năm)
-					<div style="color: red" id="z-date"> </div>
-				</td>
-			</tr>
-			<tr> <td colspan="2"><hr></td></tr>
-			<tr > <td colspan="2" >Thông tin liên lạc:</td> </tr>
-			<tr>
-				<td align="right">Email:</td>
-				<td style="color: red">
-					<input type="text" id="email" name="email" placeholder="Email" tabindex="9" onFocus="fixemail()" ">(*)
-					<div id="z-email"> </div>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">Số điện thoại:</td>
-				<td >
-					<input type="text" id="telphone" name="telphone" placeholder="Số điện thoại" tabindex="10" ">(dùng khi liên lạc)
-					<div id="z-telphone"></div>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">Địa chỉ:</td>
-				<td >
-					<input type="text" id="address" name="address" placeholder="Địa chỉ nơi ở" tabindex="11" ">(nơi để giao sản phẩm)
-					<div id="z-address"> </div>
-				</td>
-			</tr>
-			<tr> <td colspan="2"><hr></td></tr>
-			<tr>
-				<td align="right">Thông tin điều khoản:</td>
-				<td >
-					<input type="button" name="info" value="Đọc điều khoản"><br />
-					<input type="checkbox" name="accept" >Tôi chấp nhận điều khoản
-				</td>
-				<td><div id="z-accept"> </div> </td>
-			</tr>
-			<tr> <td colspan="2"><hr></td></tr>
-			<tr>
-				<td align="right"><input type="submit" name="submit" value="Đăng ký" tabindex="12" accesskey="d"> </td>
-				<td><input type="reset" name="reset" value="hủy" tabindex="13"></td>
-			</tr>
-		</table>
-	
-	</form>		
-		<div class = "container" >
-			<nav>
-				
-				<a href="index.html?cart">
-				<div id="cartBtn">
-					<div id="cartBtnIcon">
-						<img src="images/cart.png" width="25px" height="25px">	
-					</div>
-					<!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
-				</div>
-				</a>
-				<table cellspacing="0" >
-				
-					<tbody >
-						<tr >
-							<td ><a href="index.html" i class=" fa fa-home" title="Home"> Home</i></a></td>
-							<td ><a href="#" i class="fa fa-question-circle" title="About"> About</i></a></td> 
-							<td ><a href="#" i class=" fa fa-envelope" title="Contact"> Contact</i></a></td>						
-						</tr>
-					
-						
-					</tbody>
-					
-				</table>
-			</nav>
-			
-			<div class = "content" >
-				
-				<aside id = "sidebar">
-					<!-- JAVASCRIPT INSERT MENU -->
-				</aside>
-				
-				<main id = "main">
-					<!--<h1>Hello world</h1><br>-->
-					<!-- JAVASCRIPT INSERT MAIN -->
-					
-				</main>
-				
-			</div>
-		</div>
-		
-		<footer id = "footer" style="position: relative;">	
-		<br>
-		 <div class=" icon">
-          	<a href="https://www.youtube.com/?gl=VN" target="_blank"><i class="fa fa-youtube-square" style= "color:red;font-size:48px"
-          		id="youtube" title="Theo dõi kênh chúng tôi trên Youtube"></i></a>
-            <a href="https://www.facebook.com/hieuchinhung1999" target="_blank">
-            <i class="fa fa-facebook-square" style= "color:blue;font-size:48px" id="facebook" title="Theo dõi chúng tôi trên Facebook"></i></a>
-            <a href="https://www.instagram.com/trinh.duc.hieu" target="_blank"><i class="fa fa-instagram" style= "color:#EE28EE;font-size:48px" id="instagram" title="Theo dõi chúng tôi trên Instagram"></i></a>
+<body>
+    <div class="top">
+        <script> checkDangNhap();</script>
+    </div>
+    <header>
+        <div class="normal-wrapper">
+            <div id="logo-container">
+                <i style="float:left"><a href="index.html"><img src="logo/logo1.png" width="150px" height="138px" /></i></a><h1>&nbsp PHOENIX SHOP</h1>
             </div>
-		<p><strong>©PHOENIX SHOP</strong></p>
-		<p>- Cửa hàng giày thể thao chính hãng - Authentic Sneaker Store.</p>
-		<p>- Address: <strong>XX Đường YY,  Phường ZZ, Quận KK, TP.HCM</strong></p>
-		<p>- Hotline:<strong>0123456789</strong> Email: <strong>phoenixshop@gmail.com</strong></p> 
-		</footer
-	</body>
+        </div>
+    </header>
+    <br>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="sanpham/img/banner1.jpg" style="width:80%; height: 500px;margin: 0 10% 0 10% ">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <img  src="sanpham/img/banner2.png" style="width:80%; height: 500px;margin: 0 10% 0 10%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="sanpham/img/banner3.png" style="width:80%; height: 500px;margin: 0 10% 0 10%">
+            <div class="text"></div>
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    setInterval(showSlides, 2000); // 3s 1 hinh
+    </script>
+    <div class="container" id="enter">
+        <nav>
+            <a href="index.html?cart"></a>
+            <table cellspacing="0">
+                <tr id="tr">
+                    <td><a href="index.html" i class="fa fa-home" name="home" title="Home"> Home</i></a></td>
+                    <td><a href="About.html" i class="fa fa-question-circle" title="About"> About</i></a></td>
+                    <td><a href="Contact.html" i class=" fa fa-envelope" title="Contact"> Contact</i></a></td>
+                </tr>
+            </table>
+        </nav>
+        <div class="content">
+            <aside id="sidebar">
+                <!-- JAVASCRIPT INSERT MENU -->
+            </aside>
+            <main id="main">
+                <!--<h1>Hello world</h1><br>-->
+                <!-- JAVASCRIPT INSERT MAIN -->
+            </main>
+        </div>
+    </div>
+    <footer>
+        <table id="footer">
+            <tr>
+                <td width="33%">
+                    <p><strong style="font-size:18px">Liên hệ cá nhân <br>
+				Nguyễn Thiên Hữu<br>
+				Trịnh Đức Hiếu <br>
+				Lương Hữu Giang <br>
+				Đỗ Phát Sơn Huy <br>
+				</strong></p>
+                </td>
+                <td width="34%">
+                    <p><strong>©PHOENIX SHOP</strong></p>
+                    <p>- Cửa hàng giày thể thao chính hãng - Authentic Sneaker Store.</p>
+                    <p>- Address: <strong>XX Đường YY,  Phường ZZ, Quận KK, TP.HCM</strong></p>
+                    <p>- Hotline:<strong>0123456789</strong> Email: <strong>phoenixshop@gmail.com</strong></p>
+                </td>
+                <td width="33%" height="50px">
+                    <p>Ủng hộ chúng tôi</p>
+                    <a href="https://www.youtube.com/?gl=VN" target="_blank"><i class="fa fa-youtube-square" style= "color:red;font-size:48px" id="youtube" title="Theo dõi kênh chúng tôi trên Youtube"></i></a>
+                    <a href="https://www.facebook.com/hieuchinhung1999" target="_blank">
+            <i class="fa fa-facebook-square" style= "color:blue;font-size:48px" id="facebook" title="Theo dõi chúng tôi trên Facebook"></i></a>
+                    <a href="https://www.instagram.com/trinh.duc.hieu" target="_blank"><i class="fa fa-instagram" style= "color:#EE28EE;font-size:48px" id="instagram" title="Theo dõi chúng tôi trên Instagram"></i></a>
+                </td>
+            </tr>
+    </footer>
+</body>
+
 </html>

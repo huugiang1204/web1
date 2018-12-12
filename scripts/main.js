@@ -1,609 +1,637 @@
 class SanPham {
-	constructor (id, price, name, brand, color, image) {
-		this.id = id;
-		this.price = price;
-		this.name = name;
-		this.brand = brand;
-		this.color = color;
-		this.image = image;
-		
-	}
+    constructor(id, price, name, brand, color, image) {
+        this.id = id;
+        this.price = price;
+        this.name = name;
+        this.brand = brand;
+        this.color = color;
+        this.image = image;
+
+    }
 }
 // MENU
-var menu = new Array ();
-var menuLabel = new Array ("Adidas", "Asisc", "Nike","Puma","Converse");
-var menuUrl = new Array ("Adidas", "Asisc", "Nike","Puma" , "Converse");
-menu[0] = new Array ("0","Giày thể thao nam" , "Giày thể thao nữ");
-menu[1] = new Array ("0","Giày thể thao nam" , "Giày thể thao nữ");
-menu[2] = new Array ("0","Giày thể thao nam" , "Giày thể thao nữ");
-menu[3] = new Array ("0","Giày thể thao nam" , "Giày thể thao nữ");
-menu[4] = new Array ("0","Giày thể thao nam" , "Giày thể thao nữ");
+var menu = new Array();
+var menuLabel = new Array("Adidas", "Asisc", "Nike", "Puma", "Converse");
+var menuUrl = new Array("Adidas", "Asisc", "Nike", "Puma", "Converse");
+menu[0] = new Array("0", "Giày thể thao nam", "Giày thể thao nữ");
+menu[1] = new Array("0", "Giày thể thao nam", "Giày thể thao nữ");
+menu[2] = new Array("0", "Giày thể thao nam", "Giày thể thao nữ");
+menu[3] = new Array("0", "Giày thể thao nam", "Giày thể thao nữ");
+menu[4] = new Array("0", "Giày thể thao nam", "Giày thể thao nữ");
 
 
 // ITEM
-var item = new Array();	//0: id; 1: price; 2: name; 3: brand; 4: color; 5: image;
-item[0] = new SanPham ();
-item[0] = new SanPham ();
-item[1] = new SanPham ("ADG-001", "350.000", "Giày thể thao nữ", "Adidas", "Tím", "images/imgsp/anh1.jpg");
-item[2] = new SanPham ("ADB-002", "450.000", "Giày thể thao nam", "Adidas", "Trắng", "images/imgsp/anh2.jpg");
-item[3] = new SanPham ("ADB-003", "600.000", "Giày thể thao nam", "Adidas", "Trắng", "images/imgsp/anh3.jpg");
-item[4] = new SanPham ("ADG-004", "700.000", "Giày thể thao nữ", "Adidas", "Trắng ", "images/imgsp/anh4.jpg");
-item[5] = new SanPham ("ADB-005", "200.000", "Giày thể thao nam", "Adidas", "Trắng", "images/imgsp/anh5.jpg");
-item[6] = new SanPham ("ADB-006", "500.000", "Giày thể thao nam", "Adidas", "Xám", "images/imgsp/anh6.jpg");
-item[7] = new SanPham ("NIB-007", "300.000", "Giày thể thao nam", "Nike", "Nâu", "images/imgsp/anh7.jpg");
-item[8] = new SanPham ("NIB-008", "250.000", "Giày thể thao nam", "Nike", "Đen", "images/imgsp/anh8.jpg");
-item[9] = new SanPham ("NIB-009", "315.000", "Giày thể thao nam", "Nike", "Đen", "images/imgsp/anh9.jpg");
-item[10] = new SanPham ("NIG-0010", "700.000", "Giày thể thao nữ", "Nike", "Đỏ Trắng ", "images/imgsp/anh10.jpg");
-item[11] = new SanPham ("NIB-0011", "620.000", "Giày thể thao nam", "Nike", "Trắng", "images/imgsp/anh11.jpg");
-item[13] = new SanPham ("ASB-012", "300.000", "Giày thể thao nam", "Asisc", "Xám", "images/imgsp/anh13.jpg");
-item[14] = new SanPham ("ASB-013", "250.000", "Giày thể thao nam", "Asisc", "Trắng", "images/imgsp/anh14.jpg");
-item[15] = new SanPham ("ASB-014", "530.000", "Giày thể thao nam", "Asisc", "Cam", "images/imgsp/anh15.jpg");
-item[16] = new SanPham ("ASG-015", "700.000", "Giày thể thao nữ", "Asisc", "Hồng ", "images/imgsp/anh16.jpg");
-item[17] = new SanPham ("ASB-016", "780.000", "Giày thể thao nam", "Asisc", "Xanh", "images/imgsp/anh17.jpg");
-item[18] = new SanPham ("ASB-017", "880.000", "Giày thể thao nam", "Asisc", "Xanh", "images/imgsp/anh18.jpg");
-item[19] = new SanPham ("ASB-018", "459.000", "Giày thể thao nam", "Asisc", "Cầu vồng", "images/imgsp/anh19.jpg");
-item[20] = new SanPham ("ASB-019", "256.000", "Giày thể thao nam", "Asisc", "Cầu vồng", "images/imgsp/anh20.jpg");
-item[21] = new SanPham ("PUB-020", "140.000", "Giày thể thao nam", "Puma", "Xanh", "images/imgsp/anh29.jpg");
-item[22] = new SanPham ("PUB-021", "250.000", "Giày thể thao nam", "Puma", "Xanh", "images/imgsp/anh30.jpg");
-item[23] = new SanPham ("PUG-022", "1.480.000", "Giày thể thao nữ", "Puma", "Đỏ", "images/imgsp/anh31.jpg");
-item[24] = new SanPham ("CVB-023", "399.000", "Giày thể thao nam", "Converse", "Đỏ", "images/imgsp/anh25.jpg");
-item[25] = new SanPham ("CVB-024", "299.000", "Giày thể thao nam", "Converse", "Xanh", "images/imgsp/anh28.jpg");
-item[26] = new SanPham ("CVG-026", "450.000", "Giày thể thao nữ", "Converse", "Đen", "images/imgsp/anh26.jpg");
-item[27] = new SanPham ("CVG-026", "499.000", "Giày thể thao nữ", "Converse", "Sọc", "images/imgsp/anh27.jpg");
-item[28] = new SanPham ("PUG-027", "140.000", "Giày thể thao nữ", "Puma", "Vàng", "images/imgsp/anh32.jpg");
-item[29] = new SanPham ("ASG-028", "799.000", "Giày thể thao nữ", "Asisc", "Hồng ", "images/imgsp/anh33.jpg");
-item[30] = new SanPham ("ASG-029", "500.000", "Giày thể thao nữ", "Asisc", "Hồng", "images/imgsp/anh34.jpg");
-item[31] = new SanPham ("ASG-030", "300.000", "Giày thể thao nữ", "Asisc", "Đỏ ", "images/imgsp/anh35.jpg");
-item[32] = new SanPham ("NIG-021", "1.00.000", "Giày thể thao nữ", "Nike", "Đỏ", "images/imgsp/anh36.jpg");
-item[33] = new SanPham ("NIG-032", "2.000.000", "Giày thể thao nữ", "Nike", "Đỏ Tím", "images/imgsp/anh37.jpg");
-item[34] = new SanPham ("NIG-033", "999.000", "Giày thể thao nữ", "Nike", "Đen", "images/imgsp/anh38.jpg");
-item[35] = new SanPham ("PUB-034", "340.000", "Giày thể thao nam", "Puma", "Xanh", "images/imgsp/anh39.jpg");
-item[36] = new SanPham ("PUB-035", "690.000", "Giày thể thao nam", "Puma", "Xám", "images/imgsp/anh40.jpg");
-item[37] = new SanPham ("PUG-035", "480.000", "Giày thể thao nữ", "Puma", "Trắng", "images/imgsp/anh41.jpg");
-item[38] = new SanPham ("PUG-037", "280.000", "Giày thể thao nữ", "Puma", "Xám", "images/imgsp/anh42.jpg");
-item[39] = new SanPham ("CVB-038", "750.000", "Giày thể thao nam", "Converse", "Xám", "images/imgsp/anh49.jpg");
-item[40] = new SanPham ("CVB-039", "240.000", "Giày thể thao nam", "Converse", "Trắng", "images/imgsp/anh26.jpg");
-item[41] = new SanPham ("CVG-040", "540.000", "Giày thể thao nữ", "Converse", "Trắng", "images/imgsp/anh43.jpg");
-item[42] = new SanPham ("CVG-041", "299.000", "Giày thể thao nữ", "Converse", "Đen", "images/imgsp/anh44.jpg");
-item[12] = new SanPham ("ASB-042", "800.000", "Giày thể thao nam", "Asisc", "Xám", "images/imgsp/anh12.jpg");
-item[43] = new SanPham ("ADG-043", "170.000", "Giày thể thao nữ", "Adidas", "Xám", "images/imgsp/anh47.jpg");
-item[44] = new SanPham ("ADG-044", "290.000", "Giày thể thao nữ", "Adidas", "Hồng", "images/imgsp/anh48.jpg");
+var item = new Array(); //0: id; 1: price; 2: name; 3: brand; 4: color; 5: image;
+item[1] = new SanPham("ADG-001", "350.000", "Giày thể thao nữ", "Adidas", "Tím", "images/imgsp/anh1.jpg");
+item[2] = new SanPham("ADB-002", "450.000", "Giày thể thao nam", "Adidas", "Trắng", "images/imgsp/anh2.jpg");
+item[3] = new SanPham("ADB-003", "600.000", "Giày thể thao nam", "Adidas", "Trắng", "images/imgsp/anh3.jpg");
+item[4] = new SanPham("ADG-004", "700.000", "Giày thể thao nữ", "Adidas", "Trắng ", "images/imgsp/anh4.jpg");
+item[5] = new SanPham("ADB-005", "200.000", "Giày thể thao nam", "Adidas", "Trắng", "images/imgsp/anh5.jpg");
+item[6] = new SanPham("ADB-006", "500.000", "Giày thể thao nam", "Adidas", "Xám", "images/imgsp/anh6.jpg");
+item[7] = new SanPham("NIB-007", "300.000", "Giày thể thao nam", "Nike", "Nâu", "images/imgsp/anh7.jpg");
+item[8] = new SanPham("NIB-008", "250.000", "Giày thể thao nam", "Nike", "Đen", "images/imgsp/anh8.jpg");
+item[9] = new SanPham("NIB-009", "315.000", "Giày thể thao nam", "Nike", "Đen", "images/imgsp/anh9.jpg");
+item[10] = new SanPham("NIG-0010", "700.000", "Giày thể thao nữ", "Nike", "Đỏ Trắng ", "images/imgsp/anh10.jpg");
+item[11] = new SanPham("NIB-0011", "620.000", "Giày thể thao nam", "Nike", "Trắng", "images/imgsp/anh11.jpg");
+item[13] = new SanPham("ASB-012", "300.000", "Giày thể thao nam", "Asisc", "Xám", "images/imgsp/anh13.jpg");
+item[14] = new SanPham("ASB-013", "250.000", "Giày thể thao nam", "Asisc", "Trắng", "images/imgsp/anh14.jpg");
+item[15] = new SanPham("ASB-014", "530.000", "Giày thể thao nam", "Asisc", "Cam", "images/imgsp/anh15.jpg");
+item[16] = new SanPham("ASG-015", "700.000", "Giày thể thao nữ", "Asisc", "Hồng ", "images/imgsp/anh16.jpg");
+item[17] = new SanPham("ASB-016", "780.000", "Giày thể thao nam", "Asisc", "Xanh", "images/imgsp/anh17.jpg");
+item[18] = new SanPham("ASB-017", "880.000", "Giày thể thao nam", "Asisc", "Xanh", "images/imgsp/anh18.jpg");
+item[19] = new SanPham("ASB-018", "459.000", "Giày thể thao nam", "Asisc", "Cầu vồng", "images/imgsp/anh19.jpg");
+item[20] = new SanPham("ASB-019", "256.000", "Giày thể thao nam", "Asisc", "Cầu vồng", "images/imgsp/anh20.jpg");
+item[21] = new SanPham("PUB-020", "140.000", "Giày thể thao nam", "Puma", "Xanh", "images/imgsp/anh29.jpg");
+item[22] = new SanPham("PUB-021", "250.000", "Giày thể thao nam", "Puma", "Xanh", "images/imgsp/anh30.jpg");
+item[23] = new SanPham("PUG-022", "1.480.000", "Giày thể thao nữ", "Puma", "Đỏ", "images/imgsp/anh31.jpg");
+item[24] = new SanPham("CVB-023", "399.000", "Giày thể thao nam", "Converse", "Đỏ", "images/imgsp/anh25.jpg");
+item[25] = new SanPham("CVB-024", "299.000", "Giày thể thao nam", "Converse", "Xanh", "images/imgsp/anh28.jpg");
+item[26] = new SanPham("CVG-026", "450.000", "Giày thể thao nữ", "Converse", "Đen", "images/imgsp/anh26.jpg");
+item[27] = new SanPham("CVG-026", "499.000", "Giày thể thao nữ", "Converse", "Sọc", "images/imgsp/anh27.jpg");
+item[28] = new SanPham("PUG-027", "140.000", "Giày thể thao nữ", "Puma", "Vàng", "images/imgsp/anh32.jpg");
+item[29] = new SanPham("ASG-028", "799.000", "Giày thể thao nữ", "Asisc", "Hồng ", "images/imgsp/anh33.jpg");
+item[30] = new SanPham("ASG-029", "500.000", "Giày thể thao nữ", "Asisc", "Hồng", "images/imgsp/anh34.jpg");
+item[31] = new SanPham("ASG-030", "300.000", "Giày thể thao nữ", "Asisc", "Đỏ ", "images/imgsp/anh35.jpg");
+item[32] = new SanPham("NIG-021", "1.00.000", "Giày thể thao nữ", "Nike", "Đỏ", "images/imgsp/anh36.jpg");
+item[33] = new SanPham("NIG-032", "2.000.000", "Giày thể thao nữ", "Nike", "Đỏ Tím", "images/imgsp/anh37.jpg");
+item[34] = new SanPham("NIG-033", "999.000", "Giày thể thao nữ", "Nike", "Đen", "images/imgsp/anh38.jpg");
+item[35] = new SanPham("PUB-034", "340.000", "Giày thể thao nam", "Puma", "Xanh", "images/imgsp/anh39.jpg");
+item[36] = new SanPham("PUB-035", "690.000", "Giày thể thao nam", "Puma", "Xám", "images/imgsp/anh40.jpg");
+item[37] = new SanPham("PUG-035", "480.000", "Giày thể thao nữ", "Puma", "Trắng", "images/imgsp/anh41.jpg");
+item[38] = new SanPham("PUG-037", "280.000", "Giày thể thao nữ", "Puma", "Xám", "images/imgsp/anh42.jpg");
+item[39] = new SanPham("CVB-038", "750.000", "Giày thể thao nam", "Converse", "Xám", "images/imgsp/anh49.jpg");
+item[40] = new SanPham("CVB-039", "240.000", "Giày thể thao nam", "Converse", "Trắng", "images/imgsp/anh26.jpg");
+item[41] = new SanPham("CVG-040", "540.000", "Giày thể thao nữ", "Converse", "Trắng", "images/imgsp/anh43.jpg");
+item[42] = new SanPham("CVG-041", "299.000", "Giày thể thao nữ", "Converse", "Đen", "images/imgsp/anh44.jpg");
+item[12] = new SanPham("ASB-042", "800.000", "Giày thể thao nam", "Asisc", "Xám", "images/imgsp/anh50.jpg");
+item[43] = new SanPham("ADG-043", "170.000", "Giày thể thao nữ", "Adidas", "Xám", "images/imgsp/anh47.jpg");
+item[44] = new SanPham("ADG-044", "290.000", "Giày thể thao nữ", "Adidas", "Hồng", "images/imgsp/anh48.jpg");
+item[45] = new SanPham("NB-045", "270.000", "Giày thể thao nữ", "Nike", "Phối màu", "images/imgsp/anh50.jpg");
+item[46] = new SanPham("NB-046", "390.000", "Giày thể thao nữ", "Adidas", "Phối màu", "images/imgsp/anh51.jpg");
+item[47] = new SanPham("NB-047", "470.000", "Giày thể thao nữ", "Puma", "Phối màu", "images/imgsp/anh52.jpg");
+item[48] = new SanPham("NB-048", "590.000", "Giày thể thao nữ", "Asics", "Phối màu", "images/imgsp/anh53.jpg");
+item[49] = new SanPham("NB-049", "670.000", "Giày thể thao nữ", "Nike", "Phối màu", "images/imgsp/anh54.jpg");
+item[50] = new SanPham("NB-050", "790.000", "Giày thể thao nữ", "Puma", "Đen", "images/imgsp/anh55.png");
+item[51] = new SanPham("NB-051", "870.000", "Giày thể thao nữ", "Asisc", "Phối màu", "images/imgsp/anh56.jpg");
+item[52] = new SanPham("NB-052", "990.000", "Giày thể thao nữ", "Adidas", "Đen", "images/imgsp/anh57.jpg");
 /* ------------------------ */
+function hienThiSanPhamMacDinh() {
+    filters = new Array();
+    for (var i = item.length - 1; i >= 1; i--) {
 
-function getSearchBar () {
-	var s = "";
+        var kind = item[i].id.split('-');
+        if (kind[0] == "NB" || kind[0] == "NB")
+            filters.push(item[i]);
+    }
 
-	s += `<div style="width: 200px; min-height: 30px; float: left">
+    for (var i = 0; i < filters.length; i++) {
+        var s = getProduct(i, filters);
+        document.getElementById('main').innerHTML += s;
+    }
+}
+
+function getSearchBar() {
+    var s = "";
+
+    s += `<div style="width: 200px; min-height: 30px; float: left">
 			<input id="searchBar" type="text" name="search" placeholder="Tìm kiếm" style="width: 75%">
 			<input id="searchBtn" type="button" name="goSearch" value="🔎" style="width: 20%" onclick="goSearch(document.getElementById('searchBar').value)"/>
 		</div>`;
 
-	/* s += `</script>`;	*/
-	document.getElementById("sidebar").innerHTML += s;
+    /* s += `</script>`;	*/
+    document.getElementById("sidebar").innerHTML += s;
 }
 
-function getCartBtnNum () {
-	var s = "";
-	var itemArray = getCartList();
-	if (itemArray.length <= 0)
-		return;
+function getCartBtnNum() {
+    var s = "";
+    var itemArray = getCartList();
+    if (itemArray.length <= 0)
+        return;
 
-	s += `<div id="cartBtnNum">
+    s += `<div id="cartBtnNum">
 			<p>` + itemArray.length + `</p>
 		</div>`;
 
-	document.getElementById("cartBtn").innerHTML += s;
+    document.getElementById("cartBtn").innerHTML += s;
 }
 
-function getMenu () {
-	var s = "";
-	
-	var page = 1;		//Default page
+function getMenu() {
+    var s = "";
 
-	s += `<table cellspacing="0">`;
+    var page = 1; //Default page
 
-	for (var i=0; i<menu.length; i++) {
-		s += `<tr>
+    s += `<table cellspacing="0">`;
+
+    for (var i = 0; i < menu.length; i++) {
+        s += `<tr>
 				<td>
 					<a href="index.html?` + menuUrl[i] + `&0&` + page + `\" target=\"_self\" title=\"` + menuLabel[i] + `\">` + menuLabel[i] + `</a>
 					<div>
 						<ul>`;
 
-							for (var j=1; j<menu[i].length; j++) {
-								s += "<li><a href=\"index.html?" + menuUrl[i] + "&" + j + "&" + page +"\" target=\"_self\" title=\"" + menu[i][j] + "\">" + menu[i][j] + "</a></li>";
-							}
+        for (var j = 1; j < menu[i].length; j++) {
+            s += "<li><a href=\"index.html?" + menuUrl[i] + "&" + j + "&" + page + "\" target=\"_self\" title=\"" + menu[i][j] + "\">" + menu[i][j] + "</a></li>";
+        }
 
-		s += `			</ul>
+        s += `			</ul>
 					</div>
 				</td>
 			</tr>`;
-	}
+    }
 
-	s += "</table>";
+    s += "</table>";
 
-	document.getElementById("sidebar").innerHTML += s;
+    document.getElementById("sidebar").innerHTML += s;
 }
 
-function getProductWindow () {
-	var s = "";
-	var url = window.location.href;
-	var splitter = url.split('?');			// [index.html]?[ao&1&0]
-	var splitted = "";
-	if (url = splitter)					// url == splitter => index.html
-		splitted = splitter[1];				// [ao&1&0]
-	var params = splitted.split('&');		// [ao]&[1]&[0] ; 0: Category; 1: Subcategory; 2: Page
+function getProductWindow() {
+    var s = "";
+    var url = window.location.href;
+    var splitter = url.split('?'); // [index.html]?[ao&1&0]
+    var splitted = "";
+    if (splitter.length == 1) {
+        hienThiSanPhamMacDinh();
+        return;
+    }
 
-	
-	
-	// EXPERIMENTAL
-	items = new Array ();			// filtered array
-	var itemOnPage = 50;
-	var itemStart = itemOnPage*(params[2]-1)+1;
-	var itemEnd = itemOnPage*(params[2]-1)+itemOnPage;
-	
-	
-	// Filter products
-	items.push (items[i]);	// empty item
-	if (splitter[1]==true)   // Home page
-	{
-						
-	}
-	else {
-		switch (params[0]) {
-			case 'Adidas': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-						if (kind[0]=="ADB" || kind[0]=="ADG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="ADB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="ADG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					
-					
-				}
-				break;
-			}
-			case 'Asisc': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="ASG" || kind[0]=="ASB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="ASB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="ASG")
-								items.push (item[i]);
-						}
-						break;
-					}
-				}
-				break;
-			}
-			case 'Nike': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="NIB" || kind[0]=="NIG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="NIB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="NIG")
-								items.push (item[i]);
-						}
-						break;
-					}
-				}
-				break;
-			}
-			case 'Nike': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="NIB" || kind[0]=="NIG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="NIB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="NIG")
-								items.push (item[i]);
-						}
-						break;
-					}
-				}
-				break;
-			}
-			case 'Puma': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="PUB" || kind[0]=="PUG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="PUB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="PUG")
-								items.push (item[i]);
-						}
-						break;
-					}
-				}
-				break;
-			}
-			case 'Puma': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="PUB" || kind[0]=="PUG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="PUB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="PUG")
-								items.push (item[i]);
-						}
-						break;
-					}
-				}
-				break;
-			}
-			case 'Converse': {
-				switch (params[1]) {
-					case '0': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="CVB" || kind[0]=="CVG")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '1': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="CVB")
-								items.push (item[i]);
-						}
-						break;
-					}
-					case '2': {
-						for (var i=item.length-1; i>=1; i--) {
-							var kind = item[i].id.split('-');
-							if (kind[0]=="CVG")
-								items.push (item[i]);
-						}
-						break;
-					}
-				}
-				break;
-			}
-		}
-		// Filter products (SEARCH)
-		if (params[0].split("=")[0]=="search") {
-			var searchKeyword = params[0].split("=")[1];
-			searchKeyword = searchKeyword.toLowerCase();
-			for (var i=1; i<item.length; i++) {
-				var comparator = getComparator (item[i]);
-				var keywordSplitted = searchKeyword.split("+");
-				var count=0;
-				for (var j=0; j<keywordSplitted.length; j++)
-					if (comparator.indexOf(keywordSplitted[j])!=-1)
-						count++;
-				if (count == keywordSplitted.length)
-					items.push (item[i]);
-			}
-		}
-		// Product detail
-		else if (params[0].split("=")[0]=="detail") {
-			var itemID = params[0].split("=")[1];
-			getProductDetail (itemID);
-			return;
-		}
-		// Cart View
-		else if (params[0].split("=")[0]=="cart") {
-			getCartView ();
-			return;
-		}
+    splitted = splitter[1]; // [ao&1&0]
+    var params = splitted.split('&'); // [ao]&[1]&[0] ; 0: Category; 1: Subcategory; 2: Page
+
+    // EXPERIMENTAL
+    items = new Array(); // filtered array
+    var itemOnPage = 50;
+    var itemStart = itemOnPage * (params[2] - 1) + 1;
+    var itemEnd = itemOnPage * (params[2] - 1) + itemOnPage;
 
 
-	}
+    // Filter products
+    items.push(items[i]); // empty item
 
-	console.debug ("before: " + itemStart + " " + itemEnd);
+    switch (params[0]) {
+        case 'Adidas':
+            {
+                switch (params[1]) {
+                    case '0':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "ADB" || kind[0] == "ADG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '1':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "ADB")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '2':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "ADG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
 
-	if (itemEnd >= items.length)			// stop showing item
-		itemEnd = items.length-1;
 
-	console.debug ("after: " + itemStart + " " + itemEnd);
+                }
+                break;
+            }
+        case 'Asisc':
+            {
+                switch (params[1]) {
+                    case '0':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "ASG" || kind[0] == "ASB")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '1':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "ASB")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '2':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "ASG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                }
+                break;
+            }
+        case 'Nike':
+            {
+                switch (params[1]) {
+                    case '0':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "NIB" || kind[0] == "NIG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '1':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "NIB")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '2':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "NIG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                }
+                break;
+            }
+        case 'Puma':
+            {
+                switch (params[1]) {
+                    case '0':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "PUB" || kind[0] == "PUG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '1':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "PUB")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '2':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "PUG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                }
+                break;
+            }
+        case 'Converse':
+            {
+                switch (params[1]) {
+                    case '0':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "CVB" || kind[0] == "CVG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '1':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "CVB")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                    case '2':
+                        {
+                            for (var i = item.length - 1; i >= 1; i--) {
+                                var kind = item[i].id.split('-');
+                                if (kind[0] == "CVG")
+                                    items.push(item[i]);
+                            }
+                            break;
+                        }
+                }
+                break;
+            }
 
-	//Show products
-	for (var i=itemStart; i<=itemEnd; i++) {
-		console.debug (i + " " + items[i].name);
-		s += getProduct (i, items);
-	}
-	
-	//alert (s);
-	document.getElementById("main").innerHTML += s;
+            // Filter products (SEARCH)
+            if (params[0].split("=")[0] == "search") {
+                var searchKeyword = params[0].split("=")[1];
+                searchKeyword = searchKeyword.toLowerCase();
+                for (var i = 1; i < item.length; i++) {
+                    var comparator = getComparator(item[i]);
+                    var keywordSplitted = searchKeyword.split("+");
+                    var count = 0;
+                    for (var j = 0; j < keywordSplitted.length; j++)
+                        if (comparator.indexOf(keywordSplitted[j]) != -1)
+                            count++;
+                    if (count == keywordSplitted.length)
+                        items.push(item[i]);
+                }
+            }
+            // Product detail
+            else if (params[0].split("=")[0] == "detail") {
+                var itemID = params[0].split("=")[1];
+                getProductDetail(itemID);
+                return;
+            }
+            // Cart View
+            else if (params[0].split("=")[0] == "cart") {
+                getCartView();
+                return;
+            }
+    }
+    // Filter products (SEARCH)
+    if (params[0].split("=")[0] == "search") {
+        var searchKeyword = params[0].split("=")[1];
+        searchKeyword = searchKeyword.toLowerCase();
+        for (var i = 1; i < item.length; i++) {
+            var comparator = getComparator(item[i]);
+            var keywordSplitted = searchKeyword.split("+");
+            var count = 0;
+            for (var j = 0; j < keywordSplitted.length; j++)
+                if (comparator.indexOf(keywordSplitted[j]) != -1)
+                    count++;
+            if (count == keywordSplitted.length)
+                items.push(item[i]);
+        }
+    }
+    // Product detail
+    else if (params[0].split("=")[0] == "detail") {
+        var itemID = params[0].split("=")[1];
+        getProductDetail(itemID);
+        return;
+    }
+    // Cart View
+    else if (params[0].split("=")[0] == "cart") {
+        getCartView();
+        return;
+    }
+
+    console.debug("before: " + itemStart + " " + itemEnd);
+
+    if (itemEnd >= items.length) // stop showing item
+        itemEnd = items.length - 1;
+
+    console.debug("after: " + itemStart + " " + itemEnd);
+
+    //Show products
+    for (var i = itemStart; i <= itemEnd; i++) {
+        console.debug(i + " " + items[i].name);
+        s += getProduct(i, items);
+    }
+
+    //alert (s);
+    document.getElementById("main").innerHTML += s;
 }
 
-function getProductID (spID) {
-	for (var i=1; i<item.length; i++)
-		/*console.debug (spID + " " + item[i].id);*/
-		if (spID == item[i].id)
-			return i;
-	return -1;
+function getProductID(spID) {
+    for (var i = 1; i < item.length; i++)
+        if (spID == item[i].id)
+            return i;
+    return -1;
 }
 
-function getProduct (i, item) {
-	/*item[] trong day la` items[] da~ dc filter*/
-	var s = "";
-	var prodID = getProductID(item[i].id);
+function getProduct(i, arrItem) {
+    /*item[] trong day la` items[] da~ dc filter*/
+    var s = "";
+    var prodID = getProductID(arrItem[i].id);
 
-	s += `<div id="productDiv">
+    s += `<div id="productDiv">
 			<a href="index.html?detail=` + prodID + `">
-			<img src="` + item[i].image + `" width="178px" height="178px" ></a><br>
+			<img src="` + arrItem[i].image + `" width="178px" height="178px" ></a><br>
 			<div>
-				<p><span class="brand\">` + item[i].brand + `</span></p>
-				<p>` + item[i].name + `</p>
-				<p>` + item[i].color + `</p>
-				<p><span class="price">` + item[i].price + `₫</span>`;
-				s += `</p>
-				<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ" onclick="addToCart(` + prodID + `)"/>	
+				<p><span class="brand\">` + arrItem[i].brand + `</span></p>
+				<p>` + arrItem[i].name + `</p>
+				<p>` + arrItem[i].color + `</p>
+				<p><span class="price">` + arrItem[i].price + `₫</span>`;
+    s += `</p>
+				<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ" onclick="addToCart(` + prodID + `)";/>	
 			</div>
 		</div>`;
 
-	return s;
+    return s;
 }
 
-function getProductDetail (id) {
-	var s = "";
+function getProductDetail(id) {
+    var s = "";
 
-	s += `<div style="float: left">
-			<img src="`+ item[id].image + `" width="300px" height="300px" margin-top="10px">
+    s += `<div style="float: left">
+			<img src="` + item[id].image + `" width="230" height="230" style="margin-top: 50px">
 		</div>
 		<div id="productDetail">
 			<h1>` + item[id].name + `</h1>
-			<p>Thương hiệu: ` + item[id].brand + `</p>
-			<p>Loại: Vải</p>
-			<p>Màu: ` + item[id].color + `</p>
-			<p>Mã SP: ` + item[id].id + `</p>
-			<p style="margin: 1em 0"><span id="detailPrice">` + item[id].price + `₫</span>`;
-			s +=`</p>
-			<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ"/>	
+			<table border="1" cellpadding="10px" style="border-collapse: collapse">
+				<tr height="30px">
+					<th>Mã SP</th>
+					<td style="font-size:20px" width="300px">` + item[id].id + `</td>
+				</tr>
+				<tr height="30px">
+					<th>Thương hiệu</th>
+					<td style="font-size:20px">` + item[id].brand + `</td>
+				</tr>
+				<tr height="30px">
+					<th>Loại</th>
+					<td style="font-size:20px">Vải</td>
+				</tr>
+				<tr height="30px">
+					<th>Màu</th>
+					<td style="font-size:20px">` + item[id].color + `</td>
+				</tr>
+			</table>
+			<p style="margin: 1em 0"><span id="detailPrice">` + item[id].price + `₫</span>
+
+			`;
+    s += `</p>
+			<br>
+			<input type="button" class="addToCartBtn" name="addToCartBtn" value="Thêm vào giỏ" onclick="addToCart(` + id + `)" style="font-size: 20px"/>	
 		</div>`;
-	document.getElementById("main").innerHTML += s;
+
+    document.getElementById("main").innerHTML += s;
+
 }
 
-function getCartView () {
-	var s = "";
-	var itemArray = getCartList();
+function getCartView() {
+    var s = "";
+    var itemArray = getCartList();
 
-	s += `<h1>Giỏ hàng</h1>`
-		for (var i=0; i<itemArray.length; i++) {
-			var itemID = itemArray[i];
-			var itemAmount = window.localStorage.getItem ("item"+itemID);
+    s += `<h1>Giỏ hàng</h1>`;
+    for (var i = 0; i < itemArray.length; i++) {
+        var itemID = itemArray[i];
+        var itemAmount = window.localStorage.getItem("item" + itemID);
 
-			s += `<div class="cartWindow">
+        s += `<div class="cartWindow">
 					<a href="index.html?detail=` + itemID + `">
-					<div style="float: left; width: 100px; height: 100px">
-						
-							<img src="` + item[itemID].image + `" width="100px" height="100px"/>
-						
+					<div style="float: left;">
+						<img src="` + item[itemID].image + `" width="150px" height="150px"/>
 					</div>
 					<div class="cartItem">
 						<p><span class="cartItemName">` + item[itemID].name + `</span></p>
 						<p>Thương hiệu: ` + item[itemID].brand + `</p>
 						<p>Mã SP: ` + item[itemID].id + `</p>
-						<p><span class="cartItemPrice">` + item[itemID].price + `₫</span>`
-					s += `</p>
-					</div>
+						<p><span class="cartItemPrice">` + item[itemID].price + `₫</span></p>`;
+        s += `	</div>
 					</a>
 					<div class="cartOptions">
 						<p>Số lượng: </p>
-						<input type="button" name="amountDecrease" value="-" style="width: 10px; padding: 0" onclick="changeCartItemAmount(` + itemID + `, '-')"/>
-						<input type="text" id="item1Amount" value="` + itemAmount +`" style="width: 30px" onchange="changeCartItemAmount(` + itemID + `, this.value)" />
-						<input type="button" name="amountIncrease" value="+" style="width: 10px; padding: 0" onclick="changeCartItemAmount(` + itemID + `, '+')"/>
-						<input type="button" name="deleteItem" id="xoa" value="Xóa" style="margin: 1.25em 0 0 2.5em" onclick="removeCartItem(` + itemID + `)"/>
+						<input type="button" class="tangGiam" name="amountDecrease" value="-" onclick="changeCartItemAmount(` + itemID + `, '-')"/>
+						<input type="text" class="itemAmount" value="` + itemAmount + `" onchange="changeCartItemAmount(` + itemID + `, this.value)" />
+						<input type="button" class="tangGiam" name="amountIncrease" value="+" onclick="changeCartItemAmount(` + itemID + `, '+')"/> <br>
+						<input type="button" name="deleteItem" class="xoa" value="Xóa" onclick="removeCartItem('` + itemID + `', '`+item[itemID].name+`')"/>
 					</div>
 				</div>`;
-		}
-			
-	s += 	`<div style="float: left; clear: both; margin-top: 1em">
+    }
+    s += `<div style="float: left; clear: both; margin-top: 1em">
 				<p>Thành tiền: </p>
-				<h1 style="margin: 0; color: #ff9700;">` + totalCart(itemArray) + `₫</h1>
+				<h1 style="margin: 0; color: #ff9700; font-size:40px">` + totalCart(itemArray) + `₫</h1>
 			</div>
 			<div style="float: left; clear: both; margin: 1em 0">`
-			if (totalCart(itemArray)>0)
-				s += `<input class="cartPay" type="button" name="checkout" value="Thanh toán" onclick="checkOut()"/>
-						<input class="cartClear" type="button" name="clear" value="Xóa hết" onclick="clearCart()"/>`;
-	s +=	`</div>`;
+    if (totalCart(itemArray) > 0)
+        s += `<input class="cartPay" type="button" name="checkout" value="Thanh toán" onclick="checkOut()"/>
+						<input class="cartClear" type="button" name="clear" value="Xóa hết" onclick="xoaHet()"/>`;
+    s += `</div>`;
 
-	document.getElementById("main").innerHTML += s;
+    document.getElementById("main").innerHTML += s;
 }
 
-function getPageBtn (page, params) {
-	//console.debug (page + " " + params[2] + params);
+function getPageBtn(page, params) {
+    //console.debug (page + " " + params[2] + params);
 
-	var s = "";
-	var pageAltered = page;
-	var kind = "pageBtn";
+    var s = "";
+    var pageAltered = page;
+    var kind = "pageBtn";
 
-	if (page == params[2])
-		kind = "pageBtnActive";
-	if (page == "<")
-		pageAltered = parseInt(params[2])-1;
-	else if (page == ">")
-		pageAltered = parseInt(params[2])+1;
-	else if (page == "<<")
-		pageAltered = 1;
+    if (page == params[2])
+        kind = "pageBtnActive";
+    if (page == "<")
+        pageAltered = parseInt(params[2]) - 1;
+    else if (page == ">")
+        pageAltered = parseInt(params[2]) + 1;
+    else if (page == "<<")
+        pageAltered = 1;
 
-	
+
 }
 
-function getCarousel () {
-	var s = "";
-	
+function getCarousel() {
+    var s = "";
 
-  document.getElementById("main").innerHTML += s;
+
+    document.getElementById("main").innerHTML += s;
 }
 
-function goSearch (keyword) {
-	var s = `index.html?search=`;
-	keyword = removeTone (keyword);
-	keyword = keyword.replace (/ /g, "+");						//OPTIONAL
-	s += keyword;
-	s += `&0&1`;
-	window.location.href = s;
+function goSearch(keyword) {
+    var s = `index.html?search=`;
+    keyword = removeTone(keyword);
+    keyword = keyword.replace(/ /g, "+"); //OPTIONAL
+    s += keyword;
+    s += `&0&1`;
+    window.location.href = s;
 }
 
 /* CART */
 
-function addToCart (id) {
-	var itemIden = "item" + id;
-	addItemToCart (itemIden, 1);
+function addToCart(id) {
+    var itemIden = "item" + id;
+    addItemToCart(itemIden, 1);
+    alert("Bạn đã thêm vào giỏ hàng!");
 
 }
-function addItemToCart (iden, amount) {
-	var currentAmount = window.localStorage.getItem (iden);
-	if (currentAmount == null) {
-		currentAmount = 0;
+
+function addItemToCart(iden, amount) {
+    var currentAmount = window.localStorage.getItem(iden);
+    if (currentAmount == null) {
+        currentAmount = 0;
+    }
+    var newAmount = parseInt(currentAmount) + amount;
+    window.localStorage.setItem(iden, newAmount);
+    /*alert (window.localStorage.getItem (iden));*/
+    window.location.href = window.location.href;
+}
+
+function changeCartItemAmount(id, amount) {
+    var currentAmount = window.localStorage.getItem("item" + id);
+    if (amount == '-')
+        amount = parseInt(currentAmount) - 1;
+    else if (amount == '+')
+        amount = parseInt(currentAmount) + 1;
+    if (parseInt(amount) < 1)
+        amount = 1;
+    window.localStorage.setItem("item" + id, amount);
+    window.location.href = "index.html?cart";
+}
+
+function removeCartItem(id, name) {
+	if(window.confirm("Bạn có chắc muốn xóa "+name+" khỏi giỏ hàng ?")) {
+	    window.localStorage.removeItem("item" + id);
+	    window.location.href = "index.html?cart";
 	}
-	var newAmount = parseInt(currentAmount) + amount;
-	window.localStorage.setItem (iden, newAmount);
-	/*alert (window.localStorage.getItem (iden));*/
-	window.location.href = window.location.href;
 }
 
-function changeCartItemAmount (id, amount) {
-	var currentAmount = window.localStorage.getItem ("item"+id);
-	if (amount == '-')
-		amount = parseInt(currentAmount)-1;
-	else if (amount == '+')
-		amount = parseInt(currentAmount)+1;
-	if (parseInt(amount) < 1)
-		amount = 1;
-	window.localStorage.setItem ("item"+id, amount);
-	window.location.href = "index.html?cart";
-}
-
-function removeCartItem (id) {
-	window.localStorage.removeItem ("item"+id);
-	window.location.href = "index.html?cart";
-}
-
-function clearCart () {
-	var itemArray = getCartList();
-	for (var i=0; i<itemArray.length; i++) {
-		var spID = itemArray[i];
-		window.localStorage.removeItem ("item"+spID);
+function xoaHet() {
+	if(window.confirm('Bạn có chắc muốn xóa hết sản phẩm ?')) {
+		clearCart();
 	}
-	window.location.href = "index.html";
 }
 
-function checkOut () {
-	if (confirm("Bạn chắc chắn muốn mua?")==false)
-		return;
-	alert ("Mua thành công!");
-	// TODO: Thêm vào đơn đặt hàng
-	clearCart ();
+function clearCart() {
+    var itemArray = getCartList();
+    for (var i = 0; i < itemArray.length; i++) {
+        var spID = itemArray[i];
+        window.localStorage.removeItem("item" + spID);
+    }
+    window.location.href = "index.html";
 }
 
-function totalCart (itemArray) {
-	var total = 0;
-	for (var i=0; i<itemArray.length; i++) {
-		var spID = itemArray[i];
-		var newPrice = parseInt(item[spID].price.replace(/\./g, ''));
-		var currentAmount = window.localStorage.getItem ("item"+spID);
-		total += newPrice * currentAmount;
-	}
-	return total;
+function checkOut() {
+    if (confirm("Bạn chắc chắn muốn mua?")) {
+	    alert("Mua thành công!");
+	    // TODO: Thêm vào đơn đặt hàng
+	    clearCart();
+    }
 }
 
-function getCartList () {
-	var itemArray = new Array();
-	for (var i=1; i<item.length; i++) {
-		var itemAmount = window.localStorage.getItem ("item"+i);
-		if (itemAmount != null && itemAmount>0)
-			itemArray.push(i);
-	}
-	return itemArray;
+function totalCart(itemArray) {
+    var total = 0;
+    for (var i = 0; i < itemArray.length; i++) {
+        var spID = itemArray[i];
+        var newPrice = parseInt(item[spID].price.replace(/\./g, ''));
+        var currentAmount = window.localStorage.getItem("item" + spID);
+        total += newPrice * currentAmount;
+    }
+    return total;
+}
+
+function getCartList() {
+    var itemArray = new Array();
+    for (var i = 1; i < item.length; i++) {
+        var itemAmount = window.localStorage.getItem("item" + i);
+        if (itemAmount != null && itemAmount > 0)
+            itemArray.push(i);
+    }
+    return itemArray;
 }
 
 /* end CART */
@@ -626,55 +654,97 @@ function removeTone(str) {
     return str;
 }
 
-function getComparator (item) {
-	var comparator = "";
-	var cID = item.id.toLowerCase();
-	var cName = removeTone(item.name.toLowerCase()).split(" ");
-	var cBrand = removeTone(item.brand.toLowerCase()).split(" ");
-	var cColor = removeTone(item.color.toLowerCase()).split(" ");
+function getComparator(item) {
+    var comparator = "";
+    var cID = item.id.toLowerCase();
+    var cName = removeTone(item.name.toLowerCase()).split(" ");
+    var cBrand = removeTone(item.brand.toLowerCase()).split(" ");
+    var cColor = removeTone(item.color.toLowerCase()).split(" ");
 
-	comparator += cID + " ";
-	for (var i=0; i<cName.length; i++) {
-		comparator += cName[i] + " ";	
-	}
-	for (var i=0; i<cBrand.length; i++) {
-		comparator += cBrand[i] + " ";	
-	}
-	for (var i=0; i<cColor.length; i++) {
-		comparator += cColor[i] + " ";	
-	}
-	return comparator;
-}
-function showThanhDangNhap(){
-	document.getElementById("tdn").style.transform = "scale(1)";
+    comparator += cID + " ";
+    for (var i = 0; i < cName.length; i++) {
+        comparator += cName[i] + " ";
+    }
+    for (var i = 0; i < cBrand.length; i++) {
+        comparator += cBrand[i] + " ";
+    }
+    for (var i = 0; i < cColor.length; i++) {
+        comparator += cColor[i] + " ";
+    }
+    return comparator;
 }
 
-function showThanhDangKi(){
-	document.getElementById("dk").style.transform = "scale(1)";
+function scoll() {
+    var elmnt = document.getElementById("enter");
+    elmnt.scrollIntoView();
 }
 
-function showSlides() {
-				var i;
-				var slides = document.getElementsByClassName("mySlides");
-				var dots = document.getElementsByClassName("dot");
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";  
-				}
-				slideIndex++;
-				if (slideIndex > slides.length) {slideIndex = 1}    
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(" active", "");
-				}
-					slides[slideIndex-1].style.display = "block";  
-					dots[slideIndex-1].className += " active";   
-				}
-					setInterval(showSlides, 2000); // 3s 1 hinh
+function user(username,pass,ho,ten,mail,gioiTinh,ngaySinh,sdt,diaChi){
+    this.username=username;
+    this.pass=pass;
+    this.ho=ho;
+    this.ten=ten;
+    this.mail=mail;
+    this.gioiTinh=gioiTinh;
+    this.ngaySinh=ngaySinh;
+    this.sdt=sdt;
+    this.diaChi=diaChi;
+}
+
+function setCurrentUser(user){
+    localStorage.setItem("currentUser",JSON.stringify(user));
+}
+function getCurrentUser(){
+    return JSON.parse(localStorage.getItem("currentUser"));
+}
+
+function checkDangNhap(){
+        document.getElementsByClassName("top")[0].innerHTML = `        <div class="taikhoan">
+        <a href="index.html"><img src="logo/logo1.png" id="logotop"></a>
+        <input type="text" id="tendangnhap" size="20px" maxlength="25" placeholder="Tài khoản.." />
+        <input type="password" id="matkhau" size="20px" maxlength="25" placeholder="Mật khẩu.." />
+        <input type="button" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="dangNhap()"/>
+        <input type="button" id="dangky" name="dangky" value="Đăng ký" onclick="location.href='dangkytk.html'" />
+
+
+        <div id="cartBtn" onclick="location.href='index.html?cart'">
+            <div id="cartBtnIcon">
+                <img src="images/cart.png" id="imgcart" width="25px" height="25px">	
+            </div>
+                <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
+        </div>
+    </div>`
+}
+function getListUser(){
+    var ListUser=JSON.parse(localStorage.getItem("listUser"))||[];
+    var l=[];
+    for(var d of ListUser)
+    l.push(d);
+    return l;
+}
+
+function dangNhap(){
+    var listUser = getListUser();
+    var username = document.getElementById("tendangnhap").value;
+    var pass = document.getElementById("matkhau").value;
+    for(var x of listUser)
+    {
+        if((username == x.username) && (pass ==x.pass))
+            {
+                var currentUser = x;
+                setCurrentUser(currentUser);
+                return 1;
+            }
+    }
+    alert("Sai ten dang nhap / mat khau.")
+}
 
 
 
 window.onload = function() {
-	getSearchBar();
-	getCartBtnNum();
-	getMenu();
-	getProductWindow();
+	scoll();
+    getSearchBar();
+    getCartBtnNum();
+    getMenu();
+    getProductWindow();
 }
