@@ -47,6 +47,18 @@ function formcheck() {
     } else {
         document.getElementById("z-fname").innerHTML = '<span style="color:#17EB50;">OK!</span>';
     }
+        password = document.getElementById("password").value;
+    if (password == "") {
+        document.getElementById("z-password").innerHTML = '<span style="color:red;">Bạn chưa nhập mật khẩu</span>';
+        check = 0;
+        document.getElementById("password").focus();
+    } else if (password.length >= 6 && password.length <= 20) {
+        document.getElementById("z-password").innerHTML = '<span style="color:#17EB50;">OK!</span>';
+    } else {
+        document.getElementById("z-password").innerHTML = '<span style="color:red;">Kích thước mật khẩu bạn nhập không hợp lệ</span>';
+        check = 0;
+        document.getElementById("password").focus();
+    }
     repassword = document.getElementById("repassword").value;
     if (repassword == "") {
         document.getElementById("z-repassword").innerHTML = '<span style="color:red;">Bạn chưa nhập mật khẩu lại</span>';
@@ -64,18 +76,7 @@ function formcheck() {
         document.getElementById("z-repassword").innerHTML = '<span style="color:#17EB50;">OK!</span>';
         }
     //password
-    password = document.getElementById("password").value;
-    if (password == "") {
-        document.getElementById("z-password").innerHTML = '<span style="color:red;">Bạn chưa nhập mật khẩu</span>';
-        check = 0;
-        document.getElementById("password").focus();
-    } else if (password.length >= 6 && password.length <= 20) {
-        document.getElementById("z-password").innerHTML = '<span style="color:#17EB50;">OK!</span>';
-    } else {
-        document.getElementById("z-password").innerHTML = '<span style="color:red;">Kích thước mật khẩu bạn nhập không hợp lệ</span>';
-        check = 0;
-        document.getElementById("password").focus();
-    }
+
     //repassword
     
         username = document.getElementById("username").value;
