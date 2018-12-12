@@ -699,21 +699,35 @@ function getCurrentUser(){
 }
 
 function checkDangNhap(){
-        document.getElementsByClassName("top")[0].innerHTML = `        <div class="taikhoan">
-        <a href="index.html"><img src="logo/logo1.png" id="logotop"></a>
-        <input type="text" id="tendangnhap" size="20px" maxlength="25" placeholder="Tài khoản.." />
-        <input type="password" id="matkhau" size="20px" maxlength="25" placeholder="Mật khẩu.." />
-        <input type="button" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="dangNhap()"/>
-        <input type="button" id="dangky" name="dangky" value="Đăng ký" onclick="location.href='dangkytk.html'" />
-
-
-        <div id="cartBtn" onclick="location.href='index.html?cart'">
-            <div id="cartBtnIcon">
-                <img src="images/cart.png" id="imgcart" width="25px" height="25px">	
-            </div>
-                <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
-        </div>
-    </div>`
+        if(localStorage.getItem("currentUser")==null){
+                document.getElementsByClassName("top")[0].innerHTML = 
+                `<div class="taikhoan">
+                    <a href="index.html"><img src="logo/logo1.png" id="logotop"></a>
+                    <input type="text" id="tendangnhap" size="20px" maxlength="25" placeholder="Tài khoản.." />
+                    <input type="password" id="matkhau" size="20px" maxlength="25" placeholder="Mật khẩu.." />
+                    <input type="button" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="dangNhap()"/>
+                    <input type="button" id="dangky" name="dangky" value="Đăng ký" onclick="location.href='dangkytk.html'" />
+                    <div id="cartBtn" onclick="location.href='index.html?cart'">
+                        <div id="cartBtnIcon">
+                            <img src="images/cart.png" id="imgcart" width="25px" height="25px">	
+                        </div>
+                            <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
+                    </div>
+                </div>`;
+        }
+        else{
+            document.getElementsByClassName("top")[0].innerHTML = 
+            `<div class="taikhoan" style="text-align:center;margin-top:10px;" >
+                Xin chao <b >`+getCurrentUser().username+`</b>
+                <a id="logout" onclick="dangXuat()"><i >Đăng xuất</i></a>
+                <div id="cartBtn" onclick="location.href='index.html?cart'">
+                        <div id="cartBtnIcon">
+                            <img src="images/cart.png" id="imgcart" width="25px" height="25px"> 
+                        </div>
+                            <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
+                    </div>
+            </div>`
+        }
 }
 function getListUser(){
     var ListUser=JSON.parse(localStorage.getItem("listUser"))||[];
@@ -733,10 +747,15 @@ function dangNhap(){
             {
                 var currentUser = x;
                 setCurrentUser(currentUser);
+                location.reload();
                 return 1;
             }
     }
     alert("Sai ten dang nhap / mat khau.")
+}
+function dangXuat(){
+    localStorage.removeItem("currentUser");
+    location.reload();
 }
 
 

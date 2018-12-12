@@ -607,6 +607,15 @@ main>div>#pageBtnActive>p {
     padding: 0 0.5em;
 }
 
+#logout{
+    position: fixed;
+    margin-left: 50px;
+}
+
+#logout :hover{
+    color: blue;
+    cursor: pointer;
+}
 /* end PAGE BUTTONS DISPLAY */
 
 /* CART DISPLAY*/
