@@ -145,7 +145,7 @@ function dangKy(form){
     {
         listUser.push(userInfo);
         localStorage.setItem("listUser",JSON.stringify(listUser));
-        window.location.pathname = 'index.html';
+        window.location.pathname = 'web1/index.html';
     }
 }
 
