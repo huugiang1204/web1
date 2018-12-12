@@ -2,27 +2,40 @@
     margin: 0 auto;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
 body
 {
-    background:#1f511e;
+    display: block;
+    background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
+}
+h2{
+    font-weight: bold;
 }
 .table tr , td
 {
     border: 0;
     border-color: chocolate;
+    /*text-decoration: blink;*/
 }
 .table
 {
-    color:#fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ddd;
+    border-radius: 15px 15px 0 0;
 }
-#username , #password , #repassword , #fname , #lname , #email , #address , #telphone
+/*#username , #password , #repassword , #fname , #lname , #email , #address , #telphone*/
+input[type="text"], input[type="password"],input[type="date"]
 {
+    padding-left: 15px;
     border-radius: 15px;
 }
 #dangkytk , #huy
 {
     border-radius:15px;
-    background:#8c4210;
+    background:#77cc6d;
+    line-height: 30px;
+    width: 100%;
+    cursor: pointer;
 }
 #dangkytk:hover
 {
@@ -30,7 +43,7 @@ body
 }
 #huy:hover
 {
-    background:red;
+    background: #ab4564;
 }
 
 #
