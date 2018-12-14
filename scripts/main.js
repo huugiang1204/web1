@@ -104,15 +104,26 @@ function getSearchBar() {
 
 function getCartBtnNum() {
     var s = "";
+    var soluong=0;
     var itemArray = getCartList();
-    if (itemArray.length <= 0)
-        return;
+    
 
-    s += `<div id="cartBtnNum">
-			<p>` + itemArray.length + `</p>
-		</div>`;
+    for(var x of itemArray){
+        var a = 'item'+x;
+        soluong += Number(window.localStorage.getItem(a));
+    }
 
-    document.getElementById("cartBtn").innerHTML += s;
+    s += `<div id="cartBtn" onclick="location.href='index.html?cart'">
+            <div id="cartBtnIcon">
+                <img src="images/cart.png" id="imgcart" width="25px" height="25px"> 
+            </div>
+                <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
+
+            <div id="cartBtnNum">
+            <p>` + soluong + `</p>
+            </div>
+        </div>`;
+    document.getElementById("cartBtn").innerHTML = s;
 }
 
 function getMenu() {
@@ -428,7 +439,7 @@ function getProduct(i, arrItem) {
 				<p>` + arrItem[i].color + `</p>
 				<p><span class="price">` + arrItem[i].price + `₫</span>`;
     s += `</p>
-				<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ" onclick="addToCart(` + prodID + `)";/>	
+				<input type="button" name="addToCartBtn" class="gio" value="Thêm vào giỏ" onclick="addToCart(` + prodID + `);getCartBtnNum()";/>	
 			</div>
 		</div>`;
 
@@ -446,26 +457,25 @@ function getProductDetail(id) {
 			<table border="1" cellpadding="10px" style="border-collapse: collapse">
 				<tr height="30px">
 					<th>Mã SP</th>
-					<td style="font-size:20px" width="300px">` + item[id].id + `</td>
+					<td style="font-size:20px;text-align:center;" width="300px">` + item[id].id + `</td>
 				</tr>
 				<tr height="30px">
 					<th>Thương hiệu</th>
-					<td style="font-size:20px">` + item[id].brand + `</td>
+					<td style="font-size:20px;text-align:center;">` + item[id].brand + `</td>
 				</tr>
 				<tr height="30px">
 					<th>Loại</th>
-					<td style="font-size:20px">Vải</td>
+					<td style="font-size:20px;text-align:center;">Vải</td>
 				</tr>
 				<tr height="30px">
 					<th>Màu</th>
-					<td style="font-size:20px">` + item[id].color + `</td>
+					<td style="font-size:20px;text-align:center;">` + item[id].color + `</td>
 				</tr>
 			</table>
-			<p style="margin: 1em 0"><span id="detailPrice">` + item[id].price + `₫</span>
+			<p style="margin-left: 15px"><span id="detailPrice">` + item[id].price + `₫</span>
 
 			`;
     s += `</p>
-			<br>
 			<input type="button" class="addToCartBtn" name="addToCartBtn" value="Thêm vào giỏ" onclick="addToCart(` + id + `)" style="font-size: 20px"/>	
 		</div>`;
 
@@ -477,6 +487,11 @@ function getCartView() {
     var s = "";
     var itemArray = getCartList();
 
+    
+        var temp = totalCart(itemArray).toString().split("").reverse().join("").match((/.{1,3}/g));
+        temp[temp.length-1] = temp[temp.length-1].split("").reverse().join("");
+        var dinhDangTotal = temp.reverse().join(".");
+ 
     s += `<h1>Giỏ hàng</h1>`;
     for (var i = 0; i < itemArray.length; i++) {
         var itemID = itemArray[i];
@@ -485,7 +500,7 @@ function getCartView() {
         s += `<div class="cartWindow">
 					<a href="index.html?detail=` + itemID + `">
 					<div style="float: left;">
-						<img src="` + item[itemID].image + `" width="150px" height="150px"/>
+						<img src="` + item[itemID].image + `" width="170px" height="170px"/>
 					</div>
 					<div class="cartItem">
 						<p><span class="cartItemName">` + item[itemID].name + `</span></p>
@@ -496,16 +511,16 @@ function getCartView() {
 					</a>
 					<div class="cartOptions">
 						<p>Số lượng: </p>
-						<input type="button" class="tangGiam" name="amountDecrease" value="-" onclick="changeCartItemAmount(` + itemID + `, '-')"/>
+						<input type="button" class="Giam" name="amountDecrease" value="-" onclick="changeCartItemAmount(` + itemID + `, '-')"/>
 						<input type="text" class="itemAmount" value="` + itemAmount + `" onchange="changeCartItemAmount(` + itemID + `, this.value)" />
-						<input type="button" class="tangGiam" name="amountIncrease" value="+" onclick="changeCartItemAmount(` + itemID + `, '+')"/> <br>
+						<input type="button" class="Tang" name="amountIncrease" value="+" onclick="changeCartItemAmount(` + itemID + `, '+')"/> <br>
 						<input type="button" name="deleteItem" class="xoa" value="Xóa" onclick="removeCartItem('` + itemID + `', '`+item[itemID].name+`')"/>
 					</div>
 				</div>`;
     }
     s += `<div style="float: left; clear: both; margin-top: 1em">
 				<p>Thành tiền: </p>
-				<h1 style="margin: 0; color: #ff9700; font-size:40px">` + totalCart(itemArray) + `₫</h1>
+				<h1 style="margin: 0; color: #ff9700; font-size:40px">` + dinhDangTotal + `₫</h1>
 			</div>
 			<div style="float: left; clear: both; margin: 1em 0">`
     if (totalCart(itemArray) > 0)
@@ -513,7 +528,8 @@ function getCartView() {
 						<input class="cartClear" type="button" name="clear" value="Xóa hết" onclick="xoaHet()"/>`;
     s += `</div>`;
 
-    document.getElementById("main").innerHTML += s;
+    document.getElementById("main").innerHTML = s;
+    
 }
 
 function getPageBtn(page, params) {
@@ -568,7 +584,7 @@ function addItemToCart(iden, amount) {
     var newAmount = parseInt(currentAmount) + amount;
     window.localStorage.setItem(iden, newAmount);
     /*alert (window.localStorage.getItem (iden));*/
-    window.location.href = window.location.href;
+
 }
 
 function changeCartItemAmount(id, amount) {
@@ -580,13 +596,13 @@ function changeCartItemAmount(id, amount) {
     if (parseInt(amount) < 1)
         amount = 1;
     window.localStorage.setItem("item" + id, amount);
-    window.location.href = "index.html?cart";
+    capNhatMoiThu();
 }
 
 function removeCartItem(id, name) {
 	if(window.confirm("Bạn có chắc muốn xóa "+name+" khỏi giỏ hàng ?")) {
 	    window.localStorage.removeItem("item" + id);
-	    window.location.href = "index.html?cart";
+	    capNhatMoiThu();
 	}
 }
 
@@ -602,11 +618,16 @@ function clearCart() {
         var spID = itemArray[i];
         window.localStorage.removeItem("item" + spID);
     }
-    window.location.href = "index.html";
+    capNhatMoiThu();
 }
 
 function checkOut() {
     if (confirm("Bạn chắc chắn muốn mua?")) {
+        if(localStorage.getItem("currentUser")==null){
+            alert("Bạn chưa đăng nhập ! ");
+            document.getElementById("tendangnhap").focus();
+            return ;
+        }
 	    alert("Mua thành công!");
 	    // TODO: Thêm vào đơn đặt hàng
 	    clearCart();
@@ -702,14 +723,14 @@ function checkDangNhap(){
         if(localStorage.getItem("currentUser")==null){
                 document.getElementsByClassName("top")[0].innerHTML = 
                 `<div class="taikhoan">
-                    <a href="index.html"><img src="logo/logo1.png" id="logotop"></a>
+                    <a href="index.html"><img src="logo/logo1.png" class="logotop"></a>
                     <input type="text" id="tendangnhap" size="20px" maxlength="25" placeholder="Tài khoản.." />
                     <input type="password" id="matkhau" size="20px" maxlength="25" placeholder="Mật khẩu.." />
                     <input type="button" id="dangnhap" name="dangnhap" value="Đăng nhập" onclick="dangNhap()"/>
                     <input type="button" id="dangky" name="dangky" value="Đăng ký" onclick="location.href='dangkytk.html'" />
                     <div id="cartBtn" onclick="location.href='index.html?cart'">
                         <div id="cartBtnIcon">
-                            <img src="images/cart.png" id="imgcart" width="25px" height="25px">	
+                            <img src="images/cart.png" id="imgcart" width="25px" height="25px"> 
                         </div>
                             <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
                     </div>
@@ -717,14 +738,15 @@ function checkDangNhap(){
         }
         else{
             document.getElementsByClassName("top")[0].innerHTML = 
-            `<div class="taikhoan" style="text-align:center;margin-top:10px;" >
-                Xin chao <b >`+getCurrentUser().username+`</b>
-                <a id="logout" onclick="dangXuat()"><i >Đăng xuất</i></a>
-                <div id="cartBtn" onclick="location.href='index.html?cart'">
+            `<div class="taikhoan">
+             <a href="index.html"><img src="logo/logo1.png" class="logotop"></a>
+                Xin chào <b style="color:red;font-size:20px";>`+getCurrentUser().username +`</b>
+                <a id="logout" onclick="dangXuat()"><input type="button" id="logoutbt" value="Đăng xuất" " onclick="dangXuat()"></a>
+                    <div id="cartBtn" onclick="location.href='index.html?cart'">
                         <div id="cartBtnIcon">
                             <img src="images/cart.png" id="imgcart" width="25px" height="25px"> 
                         </div>
-                            <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
+                    <!-- JAVASCRIPT INSERT CART ITEMS AMOUNT -->
                     </div>
             </div>`
         }
@@ -738,15 +760,24 @@ function getListUser(){
 }
 
 function dangNhap(){
+    var admin = new user("admin","admin01","","","","","","","");
     var listUser = getListUser();
     var username = document.getElementById("tendangnhap").value;
     var pass = document.getElementById("matkhau").value;
+    if ((username == admin.username) && (pass ==admin.pass)) 
+    {
+        alert ("Xin chào Admin đẹp trai !");
+        setCurrentUser(admin);
+        location.reload();
+//        window.location.assign('admin/admin.html');
+
+        return 0 ;
+    }
     for(var x of listUser)
     {
         if((username == x.username) && (pass ==x.pass))
             {
-                var currentUser = x;
-                setCurrentUser(currentUser);
+                setCurrentUser(x);
                 location.reload();
                 return 1;
             }
@@ -758,8 +789,10 @@ function dangXuat(){
     location.reload();
 }
 
-
-
+function capNhatMoiThu(){
+    getCartView();
+    getCartBtnNum();
+}
 window.onload = function() {
 	scoll();
     getSearchBar();

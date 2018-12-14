@@ -105,7 +105,7 @@ function formcheck() {
 }
 
 
-function user(username,pass,ho,ten,mail,gioiTinh,ngaySinh,sdt,diaChi){
+function user(username,pass,ho,ten,mail,gioiTinh,ngaySinh,sdt,diaChi,trangthai){
     this.username=username;
     this.pass=pass;
     this.ho=ho;
@@ -115,6 +115,7 @@ function user(username,pass,ho,ten,mail,gioiTinh,ngaySinh,sdt,diaChi){
     this.ngaySinh=ngaySinh;
     this.sdt=sdt;
     this.diaChi=diaChi;
+    this.trangthai = trangthai ;
 }
 function getListUser(){
     var ListUser=JSON.parse(localStorage.getItem("listUser"))||[];
@@ -133,12 +134,13 @@ function dangKy(form){
     var sdt=form.telphone.value;
     var mail=form.email.value;
     var diaChi=form.address.value;
-    var userInfo=new user(tenDangNhap,pass,ho,ten,mail,gt,ngaySinh,sdt,diaChi);
+    var trangthai = 0;
+    var userInfo=new user(tenDangNhap,pass,ho,ten,mail,gt,ngaySinh,sdt,diaChi,trangthai);
     var listUser = getListUser();
     for(var x of listUser)
     {
         if(tenDangNhap == x.username)
-        {   alert("Deo cho nhap !!!");
+        {   alert("Tên đã có người dùng.Chậm tay rồi bác :v !!!");
             return 0;
         }
     }

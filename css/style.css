@@ -15,12 +15,16 @@ html {
 	border: none;
 	padding: 5px 5px 5px 10px;
 }
-#logotop
+.logotop
 {
     float: left;
     padding: 5px;
     height:40px;
     width: 60px;
+}
+.logotop:hover
+{
+    transform: scale(1.2);
 }
 #tendangnhap {
     margin: auto;
@@ -73,7 +77,6 @@ html {
     padding-top: 0px;
 
 }
-
 .normal-wrapper {
     height: 230px;
     width: 100%;
@@ -89,6 +92,11 @@ html {
 
 #logo-container {
     margin-top: 55px;
+}
+#logo-container:hover
+{
+    transform: scale(1.01);
+     transition-duration: 0.1s;
 }
 
 .container {
@@ -139,7 +147,6 @@ header {
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    /*background-image: url(../sanpham/img/bg1.jpg);*/
 }
 header div {
     color: #FFFFFF;
@@ -207,7 +214,7 @@ header div p {
 	border: none;
 }
 
-.tangGiam {
+.Tang {
 	/*padding: 10px;*/
 	border-radius: 50%;
 	border: none;
@@ -219,9 +226,25 @@ header div p {
 	color: #555;
 }
 
-.tangGiam:hover {
+.Tang:hover {
 	background-color: #21a521;
 	color: #fff;
+}
+.Giam {
+    /*padding: 10px;*/
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #555;
+}
+
+.Giam:hover {
+    background-color: red;
+    color: #fff;
 }
 
 /* End */
@@ -447,7 +470,8 @@ nav table td:hover {
 .addToCartBtn {
     border: none;
     font-size: 16px;
-    padding: 7px;
+    margin-top: 10px;
+    padding: 5px;
     width: 140px;
     height: 33px;
     text-align: center;
@@ -607,15 +631,6 @@ main>div>#pageBtnActive>p {
     padding: 0 0.5em;
 }
 
-#logout{
-    position: fixed;
-    margin-left: 50px;
-}
-
-#logout :hover{
-    color: blue;
-    cursor: pointer;
-}
 /* end PAGE BUTTONS DISPLAY */
 
 /* CART DISPLAY*/
@@ -651,7 +666,20 @@ main>div>#pageBtnActive>p {
 #instagram:hover {
     transform: scale(1.2)
 }
+#logoutbt
+{
+    cursor: pointer;
+    border-radius:50px;   
+    border-color:#006699;
+    margin-top: 7px;
+    background:#006699;
+}
+#logoutbt:hover
+{
+    background:red;
+    border-color:red;
 
+}
 #footer {
     margin: 10px, 0px, 0px, 0px;
     clear: both;

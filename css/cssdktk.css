@@ -8,6 +8,9 @@ body
     display: block;
     background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
 }
+form{
+    height: 100%;
+}
 h2{
     font-weight: bold;
 }
@@ -21,7 +24,9 @@ h2{
 {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ddd;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 15px 15px;
+    height:100%;
+    width: 600px;
 }
 /*#username , #password , #repassword , #fname , #lname , #email , #address , #telphone*/
 input[type="text"], input[type="password"],input[type="date"]
@@ -45,7 +50,5 @@ input[type="text"], input[type="password"],input[type="date"]
 {
     background: #ab4564;
 }
-
-#
 
 
