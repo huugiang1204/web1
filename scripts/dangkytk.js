@@ -148,7 +148,7 @@ function dangKy(form){
     {
         listUser.push(userInfo);
         localStorage.setItem("listUser",JSON.stringify(listUser));
-        window.location.href="https://github.com/thienhuu1804/web1/index.html";
+        window.location.href="https://thienhuu1804.github.io/web1/index.html";
     }
 }
 
