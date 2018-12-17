@@ -1,0 +1,24 @@
+.content
+{
+	text-align: center;
+	margin: 0 auto;
+	width: 1200px;
+	height:500px;
+  min-width:235px;
+}
+.content td, #content th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.content tr:nth-child(even){background-color: #f2f2f2;}
+
+.content tr:hover {background-color: #ddd;}
+
+.content th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}

@@ -5,21 +5,22 @@
     <link rel="shortcut icon" href="Logo.ico" />
     <title>About Phoenix Shop</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styleab.css">
-    <link rel="stylesheet" type="text/css" href="about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+
+    
     <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 
 <body>
     <div class="top">
-        <div class="taikhoan">
-            Tài Khoản <input type="text" id="tendangnhap" size="20px" maxlength="25" />
-            Mật khẩu <input type="password" id="mật khẩu" size="20px" maxlength="25" />
-            <input type="submit" id="dangnhap" name="dangnhap" value="Đăng nhập" />
-            <a href="dangkytk.html"><input type="submit" id="dangky" name="dangky" value="Đăng ký"/></a>
-        </div>
+
+
+        <script> checkDangNhap();</script>
+
+
     </div>
     <header>
         <div class="normal-wrapper">
@@ -40,6 +41,7 @@
             </table>
         </nav>
     </div>
+    <span style="font-size:16px">PHOENIX được tạo nên bởi niềm đam mê của bốn bạn trẻ chúng tôi với hi vọng mang lại cho mọi người những dòng giày tốt nhất với giá cả hợp lý. Cái tên Phoenix tượng trưng cho loài Phượng Hoàng hồi sinh trong đống tro tàn của mình và có một sức sống tiềm tàng mạnh mẽ. Phoenix luôn cố gắng đem lại những thông điệp văn hóa dành cho những khách hàng đến với shop.Song song với đó, sự đa dạng phong phú về các loại giày cũng là những yếu tố tạo nên Phoenix đầy sức hút, sự lựa chọn hoàn hảo cho các bạn trẻ yêu thích phong cách năng động,mạnh mẽ và thời trang.</span>
     <br>
     <div class="lienhe">
         <h1 class="tieude1">MỌI THẮC MẮC HÃY LIÊN HỆ CHÚNG TÔI</h1>
@@ -55,7 +57,7 @@
             </tr>
             <tr>
                 <td>Điện thoại</td>
-                <td><input type="number" name="sdt" size="25" placeholder="Số điện thoại"></td>
+                <td><input type="text" name="sdt" size="25" placeholder="Số điện thoại"></td>
             </tr>
             <tr>
                 <td>Địa chỉ</td>
@@ -64,13 +66,12 @@
         </table>
         <h2>Loại liên hệ</h2>
         <p><input type="radio" name="radio">Thông tin chung</p>
-        <p><input type="radio" name="radio"> Tư vấn / Giải pháp</p>
+        <p><input type="radio" name="radio">Tư vấn / Giải pháp</p>
         <p><input type="radio" name="radio">Nhân sự</p>
-        <p><input type="radio" name="radio"> Đào tạo</p>
-        <p><input type="radio" name="radio"> Bảo vệ</p>
+        <p><input type="radio" name="radio">Đào tạo</p>
+        <p><input type="radio" name="radio">Bảo vệ</p>
         <h2>Nội dung</h2>
-        <textarea rows="10" cols="50">
-			</textarea>
+        <textarea rows="10" cols="50" placeholder="Nhập van bản ..."></textarea>
         <br>
         <input type="submit" name="submit" value="Send" onclick="send();">
         <script type="text/javascript">
