@@ -63,6 +63,7 @@ function formcheck() {
     if (repassword == "") {
         document.getElementById("z-repassword").innerHTML = '<span style="color:red;">Bạn chưa nhập mật khẩu lại</span>';
         check = 0;
+        //document.getElementById("repassword").style.background="red";
         document.getElementById("repassword").focus();
     } else if (password != repassword) {
         document.getElementById("z-repassword").innerHTML = '<span style="color:red;">Mật khẩu nhập lại khác với mật khẩu trên</span>';
